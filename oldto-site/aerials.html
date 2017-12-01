@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Old Toronto: Mapping Historical Photographs of Toronto</title>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles/jquery-ui.min.css">
+  <link href='styles/fonts.css' rel='stylesheet' />
+  <link href='styles/viewer.css' rel='stylesheet' />
+  <link href='styles/aerials.css' rel='stylesheet' />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="left-nav mdl-card mdl-shadow--8dp">
+    <div class="mdl-card__title">
+      <div class="TitleLogo">Old
+        <div class="mapleleaf">
+          <svg width="25px" height="27px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g transform="translate(-118, -27)" fill="#FFFFFF">
+              <path d="M130.498408,27 L128.054855,31.418782 C128.003661,31.494814 127.920635,31.5470352 127.834426,31.5470352 C127.789863,31.5470352 125.180789,30.0799703 125.180789,30.0799703 L126.735199,37.0137593 C126.747666,37.0492048 126.747666,37.0789682 126.747666,37.1146843 C126.747666,37.3655085 126.545539,37.5627587 126.30946,37.5627587 C126.187442,37.5627587 126.076033,37.5105374 125.997782,37.4355878 L123.229554,34.1551204 L122.170115,36.071342 C122.112819,36.1411507 122.021836,36.2014892 121.921303,36.2014892 C121.906714,36.2014892 118.44802,35.5093549 118.44802,35.5093549 C118.44802,35.5093549 119.627886,39.3158227 119.627886,39.3534328 C119.627886,39.4738393 119.561041,39.5812581 119.463161,39.6397026 L118,40.4944532 L124.34284,45.6389209 C124.401727,45.7000712 124.433824,45.7798912 124.433824,45.8678285 C124.433824,45.910309 123.765109,48.5589806 123.765109,48.5589806 C123.765109,48.5589806 129.360453,47.3771032 129.385653,47.3771032 C129.594941,47.3771032 129.771868,47.5608246 129.771868,47.7789091 L129.655685,54 L131.342193,54 L131.236886,47.7789091 C131.236886,47.560554 131.406385,47.3771032 131.620183,47.3771032 C131.642199,47.3771032 137.237278,48.5589806 137.237278,48.5589806 C137.237278,48.5589806 136.563524,45.910309 136.563524,45.8678285 C136.563524,45.7801617 136.600395,45.7000712 136.657425,45.6389209 L143,40.4944532 L141.537635,39.6397026 C141.438959,39.5812581 141.375032,39.4738393 141.375032,39.3534328 C141.375032,39.3158227 142.552776,35.5093549 142.552776,35.5093549 C142.552776,35.5093549 139.098856,36.2014892 139.086389,36.2014892 C138.974981,36.2014892 138.891955,36.1411507 138.830681,36.071342 L137.770977,34.1551204 L135.006992,37.4355878 C134.92211,37.5105374 134.815211,37.5627587 134.692662,37.5627587 C134.454461,37.5627587 134.252334,37.3655085 134.252334,37.1146843 C134.252334,37.0792388 135.820537,30.0799703 135.820537,30.0799703 C135.820537,30.0799703 133.212524,31.5470352 133.171144,31.5470352 C133.079896,31.5470352 132.994217,31.494814 132.949654,31.418782 L130.498408,27"></path>
+            </g>
+          </svg>
+        </div>
+        <br/>
+        Toronto
+      </div>
+      <div class="Title-Subhead">
+        Mapping historical photos
+      </div>
+    </div>
+
+    <div class="nav-contents">
+      <div id="search">
+        <div class="search-icon">
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Design" stroke="#666666" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"  transform="translate(1.000000, 1.000000)">
+              <path d="M8.00517612,8.23552212 L13,13 L8.00517612,8.23552212 Z M4.35706391,9 C1.95072384,9 0,6.9852815 0,4.5 C0,2.0147185 1.95072384,0 4.35706391,0 C6.76340398,0 8.71412782,2.0147185 8.71412782,4.5 C8.71412782,6.9852815 6.76340398,9 4.35706391,9 Z" stroke-width="2"></path>
+            </g>
+          </svg>
+        </div>
+
+        <input id="location-search" type="text" placeholder="Address, Neighbourhood, etc." />
+      </div>
+
+      <hr>
+
+      <div id="slider-label">Aerial Photo Date</div>
+      <div id="slider"></div>
+
+      <div id="time-nav">
+        <span id="prev-year">
+          <svg width="11px" height="17px" viewBox="0 0 11 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Satellite" fill="none" transform="translate(2, -4)" stroke="#0072CE" stroke-width="2">
+              <polyline id="arrow" transform="translate(4, 12.5) scale(-1, 1) translate(-4, -12.5) " points="0 5 8 12.5 0 20"></polyline>
+            </g>
+          </svg>
+        </span>
+        <span id="year">1983</span>
+        <span id="next-year">
+          <svg width="11px" height="17px" viewBox="0 0 11 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Satellite" fill="none" transform="translate(1, -4)" stroke="#0072CE" stroke-width="2">
+              <polyline id="arrow" points="0 5 8.125 12.5 0 20"></polyline>
+            </g>
+          </svg>
+        </span>
+
+        <a id="play-pause">
+          <i class="material-icons" id="pause" style="display: none">pause</i>
+          <i class="material-icons" id="play">play_arrow</i>
+        </a>
+      </div>
+
+      <hr>
+
+      <div class="label-control">
+        <input type="checkbox" id="show-labels">
+        <label for="show-labels"> Show Labels</label>
+      </div>
+    </div>
+  </div>
+
+  <a class="oldto-link" href="/">
+    <img src="images/photomap-button.png" width="97" height="97" border="0">
+  </a>
+
+  <div class="feedback-about">
+    <a class="mdl-shadow--4dp" href="/about.html">About</a>
+    <a class="mdl-shadow--4dp" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
+  </div>
+
+  <div class="legal">
+    <a href="https://sidewalktoronto.ca/wp-content/uploads/2018/01/Sidewalk-Toronto-Website-Privacy-Policy-.pdf">Privacy Policy</a>,
+    <a href="terms.pdf">Terms of Use</a>
+    <span class="long-copyright">Copyright ©2018, Sidewalk Toronto Employees Ltd. All rights reserved.</span>
+    <span class="short-copyright"><br>©2018 Sidewalk Toronto</span>
+  </div>
+  <script src="js/vendor/vendor-all.js"></script>
+</body>
+</html>

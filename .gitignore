@@ -1,0 +1,29 @@
+#Eclipse Metadata
+.project
+.pydevproject
+.settings/
+
+#Ignore Python Build Files
+*.pyc
+
+#Ignore Javascript build files
+dist/
+
+cache
+*.sqlite
+*.ipynb
+
+.vscode
+*.log*
+
+# Images and data files
+*.jp2
+aerials/*.html
+/images
+.DS_Store
+*.osm
+
+detections.ndjson
+
+# secrets
+oldtoronto/settings.py

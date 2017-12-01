@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <title>OldTO Location Correction</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/fonts-aboutpage.css">
+  <link rel="stylesheet" href="corrections.css">
+  <link rel="icon" href="images/OT-favicon-32x32.png">
+</head>
+
+<body>
+
+<div id="content-area">
+
+<div class="heading">
+  <span class="TitleLogo2">Old Toronto</span>
+  <div class="mapleleaf">
+    <svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-312.000000, -44.000000)" fill="#0072CE">
+          <g id="top-nav" transform="translate(129.000000, 34.000000)">
+            <g id="lockup">
+              <path d="M189.435107,12.9458547 C189.402343,12.9965426 189.349206,13.0313568 189.294033,13.0313568 C189.265512,13.0313568 187.595705,12.0533136 187.595705,12.0533136 L188.590527,16.6758395 C188.598506,16.6994699 188.598506,16.7193121 188.598506,16.7431229 C188.598506,16.910339 188.469145,17.0418391 188.318054,17.0418391 C188.239963,17.0418391 188.168661,17.007025 188.118581,16.9570585 L186.346915,14.7700803 L185.668874,16.0475613 C185.632204,16.0941004 185.573975,16.1343261 185.509634,16.1343261 C185.500297,16.1343261 183.286733,15.6729033 183.286733,15.6729033 C183.286733,15.6729033 184.041847,18.2105485 184.041847,18.2356219 C184.041847,18.3158929 183.999066,18.3875054 183.936423,18.4264684 L183,18.9963021 L187.059418,22.4259473 C187.097106,22.4667141 187.117647,22.5199274 187.117647,22.5785523 C187.117647,22.6068726 186.68967,24.3726538 186.68967,24.3726538 C186.68967,24.3726538 190.27069,23.5847355 190.286818,23.5847355 C190.420762,23.5847355 190.533995,23.7072164 190.533995,23.8526061 L190.459638,28 L191.539003,28 L191.471607,23.8526061 C191.471607,23.707036 191.580087,23.5847355 191.716917,23.5847355 C191.731008,23.5847355 195.311858,24.3726538 195.311858,24.3726538 C195.311858,24.3726538 194.880655,22.6068726 194.880655,22.5785523 C194.880655,22.5201078 194.904253,22.4667141 194.940752,22.4259473 L199,18.9963021 L198.064086,18.4264684 C198.000934,18.3875054 197.96002,18.3158929 197.96002,18.2356219 C197.96002,18.2105485 198.713776,15.6729033 198.713776,15.6729033 C198.713776,15.6729033 196.503268,16.1343261 196.495289,16.1343261 C196.423988,16.1343261 196.370851,16.0941004 196.331636,16.0475613 L195.653425,14.7700803 L193.884475,16.9570585 C193.83015,17.007025 193.761735,17.0418391 193.683304,17.0418391 C193.530855,17.0418391 193.401494,16.910339 193.401494,16.7431229 C193.401494,16.7194925 194.405144,12.0533136 194.405144,12.0533136 C194.405144,12.0533136 192.736016,13.0313568 192.709532,13.0313568 C192.651133,13.0313568 192.596299,12.9965426 192.567779,12.9458547 L190.998981,10 L189.435107,12.9458547 Z" id="Fill-1"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <span class="TitleSubhead2">Mapping historical photos</span>
+  <div class="feedback-about">
+    <a class="mdl-shadow--4dp" href="/">Photo Map</a>
+    <a class="mdl-shadow--4dp" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
+  </div>
+</div>
+
+<div class="body">
+
+<div class="popup" style="display:none">
+  Thanks for your help!
+  <h4>
+    Your feedback has been received.
+    If you'd like to keep going, we'll keep showing you more locations to correct or confirm.
+  </h4>
+</div>
+
+<div id="loading">Loading&hellip;</div>
+
+<div class="container" style="display: none">
+  <div class="inputside" >
+    <h2 class="thanks">&nbsp;</h2>
+    <h4>&nbsp;</h4>
+    <a class="link" href="" target="_blank">
+      <img border=0> <!-- src filled in by JS -->
+    </a>
+
+    <div class="details">
+      <div class="caption1"><a target="_blank" class="link" href="">City of Toronto Archives</a></div>
+      <div class="title"></div>
+
+      <div class="value scope"></div>
+
+      <div class="label">Date of Creation</div>
+      <div class="value date"></div>
+
+      <div class="label physical_desc">Physical Description</div>
+      <div class="value physical_desc"></div>
+
+      <div class="label">Archival Citation</div>
+      <div class="value"><a target="_blank" class="link citation" href=""></a></div>
+
+      <div class="label">Access conditions</div>
+      <div class="value condition"></div>
+
+      <div style="display:none" class="geocode-debug"></div>
+    </div>
+  </div>
+
+  <div class="outputside">
+    <h2>Drag the marker to the correct location.</h2>
+    <h4>You may use the search bar to get started.</h4>
+    <button id="reset" style="display: none">Reset</button>
+    <input id="pac-input" class="controls" type="text" placeholder="Search for an address, cross streets or a place name" />
+    <div id="map"></div>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdc7E_qANfJ6VaO2GRsH4C97acgoom5P0rmejTJZBCocVKRPQ/formResponse"
+      method="POST"
+      target="hiddenFrame"
+    >
+      <textarea cols="80" rows="5" name="entry.1170231561" placeholder="Any additional notes: how did you figure out where the image was? Anything interesting about it?"></textarea><br>
+
+      <button type="submit" id="no-location" value="unlocatable">Don't know / Can't Tell</button>
+      <button type="submit" id="submit">Location is correct</button>
+      <input type="hidden" name="entry.1397957822" id="photo-id">
+      <input type="hidden" name="entry.312030340" id="init-lat">
+      <input type="hidden" name="entry.174764679" id="init-lng">
+      <input type="hidden" name="entry.1749382612" value="" id="lat">
+      <input type="hidden" name="entry.1246807079" value="" id="lng">
+      <input type="hidden" name="entry.228701077" value="" id="method">
+      <input type="hidden" name="entry.1091712932" value="" id="last-search">
+      <input type="hidden" name="entry.194111154" value="" id="outcome">
+      <input type="hidden" name="entry.974184939" value="" id="user-cookie">
+
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="draftResponse" value="[null,null,&quot;3074734989547986256&quot;]">
+      <input type="hidden" name="pageHistory" value="0">
+      <input type="hidden" name="fbzx" value="3074734989547986256">
+    </form>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS3o6gGDBx16T0OQtb_2wJRuxlcFjfnyA&libraries=places&callback=initMap"
+  async defer></script>
+
+<script src="ids.js" async></script>
+
+<iframe class="hide" name="hiddenFrame"></iframe>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79490400-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

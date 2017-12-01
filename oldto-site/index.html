@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Old Toronto: Mapping Historical Photographs of Toronto</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles/grid.css" />
+  <link rel="stylesheet" href="styles/octicons/octicons.css">
+  <link rel="stylesheet" href="styles/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <link rel="stylesheet" href="styles/viewer.css" />
+  <link rel="icon" href="images/OT-favicon-32x32.png">
+
+  <meta property="og:title" content="Old Toronto" />
+  <meta property="og:site_name" content="Old Toronto" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oldtoronto.sidewalklabs.com/" />
+  <meta property="og:description" content="Old Toronto shows over 30,000 historical images from the Toronto Archives. Find photos of your apartment, work, or favourite park!" />
+  <meta property="og:image" content="https://storage.googleapis.com/sidewalk-old-toronto/images/f1568_it0311.jpg" />
+
+  <meta name="Description" content="Old Toronto shows over 30,000 historical images from the Toronto Archives. Find photos of your apartment, work, or favourite park!" />
+
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body class="view-map">
+  <div id="map">Loading&hellip;</div>
+
+  <div class="mobile-logo">
+    <div class="TitleLogo">OT</div>
+    <div class="mapleleaf">
+      <svg width="11px" height="13px" viewBox="0 0 11 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-42, -13)" fill="#FFFFFF">
+            <path d="M47.4992997,13 L46.4241363,15.1275617 C46.4016106,15.1641697 46.3650794,15.1893132 46.3271475,15.1893132 C46.3075397,15.1893132 45.1595472,14.4829487 45.1595472,14.4829487 L45.8434874,17.8214397 C45.8489729,17.838506 45.8489729,17.8528365 45.8489729,17.8700332 C45.8489729,17.9908004 45.7600373,18.0857727 45.6561625,18.0857727 C45.6024743,18.0857727 45.5534547,18.0606291 45.5190243,18.0245423 L44.3010037,16.445058 L43.8348506,17.3676832 C43.8096405,17.4012948 43.7696078,17.4303466 43.7253735,17.4303466 C43.7189542,17.4303466 42.1971289,17.0970968 42.1971289,17.0970968 C42.1971289,17.0970968 42.7162698,18.9298406 42.7162698,18.9479491 C42.7162698,19.0059226 42.6868581,19.0576428 42.6437908,19.0857827 L42,19.4973293 L44.7908497,21.9742952 C44.81676,22.003738 44.8308824,22.0421698 44.8308824,22.08451 C44.8308824,22.1049636 44.536648,23.3802499 44.536648,23.3802499 C44.536648,23.3802499 46.9985994,22.8111979 47.0096872,22.8111979 C47.101774,22.8111979 47.1796218,22.8996563 47.1796218,23.0046599 L47.1285014,26 L47.8705649,26 L47.8242297,23.0046599 C47.8242297,22.899526 47.8988095,22.8111979 47.9928805,22.8111979 C48.0025677,22.8111979 50.4644024,23.3802499 50.4644024,23.3802499 C50.4644024,23.3802499 50.1679505,22.1049636 50.1679505,22.08451 C50.1679505,22.0423001 50.1841737,22.003738 50.209267,21.9742952 L53,19.4973293 L52.3565593,19.0857827 C52.3131419,19.0576428 52.285014,19.0059226 52.285014,18.9479491 C52.285014,18.9298406 52.8032213,17.0970968 52.8032213,17.0970968 C52.8032213,17.0970968 51.2834967,17.4303466 51.2780112,17.4303466 C51.2289916,17.4303466 51.1924603,17.4012948 51.1654995,17.3676832 L50.6992297,16.445058 L49.4830766,18.0245423 C49.4457283,18.0606291 49.3986928,18.0857727 49.3447712,18.0857727 C49.2399627,18.0857727 49.1510271,17.9908004 49.1510271,17.8700332 C49.1510271,17.8529668 49.8410364,14.4829487 49.8410364,14.4829487 C49.8410364,14.4829487 48.6935107,15.1893132 48.6753035,15.1893132 C48.6351541,15.1893132 48.5974556,15.1641697 48.5778478,15.1275617 L47.4992997,13"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="left-nav mdl-card mdl-shadow--8dp">
+    <div class="mdl-card__title">
+      <div class="TitleLogo">Old TO
+        <div class="mapleleaf">
+          <svg width="25px" height="27px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g transform="translate(-118, -27)" fill="#FFFFFF">
+              <path d="M130.498408,27 L128.054855,31.418782 C128.003661,31.494814 127.920635,31.5470352 127.834426,31.5470352 C127.789863,31.5470352 125.180789,30.0799703 125.180789,30.0799703 L126.735199,37.0137593 C126.747666,37.0492048 126.747666,37.0789682 126.747666,37.1146843 C126.747666,37.3655085 126.545539,37.5627587 126.30946,37.5627587 C126.187442,37.5627587 126.076033,37.5105374 125.997782,37.4355878 L123.229554,34.1551204 L122.170115,36.071342 C122.112819,36.1411507 122.021836,36.2014892 121.921303,36.2014892 C121.906714,36.2014892 118.44802,35.5093549 118.44802,35.5093549 C118.44802,35.5093549 119.627886,39.3158227 119.627886,39.3534328 C119.627886,39.4738393 119.561041,39.5812581 119.463161,39.6397026 L118,40.4944532 L124.34284,45.6389209 C124.401727,45.7000712 124.433824,45.7798912 124.433824,45.8678285 C124.433824,45.910309 123.765109,48.5589806 123.765109,48.5589806 C123.765109,48.5589806 129.360453,47.3771032 129.385653,47.3771032 C129.594941,47.3771032 129.771868,47.5608246 129.771868,47.7789091 L129.655685,54 L131.342193,54 L131.236886,47.7789091 C131.236886,47.560554 131.406385,47.3771032 131.620183,47.3771032 C131.642199,47.3771032 137.237278,48.5589806 137.237278,48.5589806 C137.237278,48.5589806 136.563524,45.910309 136.563524,45.8678285 C136.563524,45.7801617 136.600395,45.7000712 136.657425,45.6389209 L143,40.4944532 L141.537635,39.6397026 C141.438959,39.5812581 141.375032,39.4738393 141.375032,39.3534328 C141.375032,39.3158227 142.552776,35.5093549 142.552776,35.5093549 C142.552776,35.5093549 139.098856,36.2014892 139.086389,36.2014892 C138.974981,36.2014892 138.891955,36.1411507 138.830681,36.071342 L137.770977,34.1551204 L135.006992,37.4355878 C134.92211,37.5105374 134.815211,37.5627587 134.692662,37.5627587 C134.454461,37.5627587 134.252334,37.3655085 134.252334,37.1146843 C134.252334,37.0792388 135.820537,30.0799703 135.820537,30.0799703 C135.820537,30.0799703 133.212524,31.5470352 133.171144,31.5470352 C133.079896,31.5470352 132.994217,31.494814 132.949654,31.418782 L130.498408,27"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="Title-Subhead">
+        Mapping historical photos
+      </div>
+    </div>
+
+    <div class="nav-contents">
+      <div id="clear-filters" class="caption2" style="display:none;">Clear filters</div>
+      <div id="search">
+        <div class="search-icon">
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Design" stroke="#666666" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"  transform="translate(1.000000, 1.000000)">
+              <path d="M8.00517612,8.23552212 L13,13 L8.00517612,8.23552212 Z M4.35706391,9 C1.95072384,9 0,6.9852815 0,4.5 C0,2.0147185 1.95072384,0 4.35706391,0 C6.76340398,0 8.71412782,2.0147185 8.71412782,4.5 C8.71412782,6.9852815 6.76340398,9 4.35706391,9 Z" stroke-width="2"></path>
+            </g>
+          </svg>
+        </div>
+
+        <input id="location-search" type="text" placeholder="Address, Neighbourhood, etc." />
+      </div>
+
+      <hr>
+
+      <!-- Time Slider -->
+      <div class="time-range-ui">
+        <h1>Date Range</h1>
+        <div class="time-chart-container">
+          <div title="Histogram of photo dates" class="time-chart time-chart-fg"></div>
+          <div title="Histogram of photo dates" class="time-chart time-chart-bg"></div>
+          <div id="time-slider"></div>
+          <div class="time-range-label" id="time-range-label-first">1850</div>
+          <div class="time-range-label" id="time-range-label-last">2018</div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Popular Photos -->
+      <div id="popular">
+        <h1>Popular Photos</h1>
+        <div class="popular-photo" id="popular-photo-template" style="display:none">
+          <a href=""><img class="popular-image" src="" width=200 height=0 /></a>
+        </div>
+      </div>
+    </div>  <!-- .nav-contents -->
+  </div>  <!-- .left-nav -->
+
+  <!--
+  <a class="aerials-link" href="aerials.html">
+    <img src="images/aerial-button.png" width="97" height="97" border="0">
+  </a>
+  -->
+
+  <div class="feedback-about">
+    <a class="mdl-shadow--4dp" href="/about.html">About</a>
+    <a class="mdl-shadow--4dp" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
+  </div>
+
+  <div class="legal">
+    <a href="https://sidewalktoronto.ca/wp-content/uploads/2018/01/Sidewalk-Toronto-Website-Privacy-Policy-.pdf">Privacy Policy</a>,
+    <a href="terms.pdf">Terms of Use</a>
+    <span class="long-copyright">Copyright ©2018, Sidewalk Toronto Employees Ltd. All rights reserved.</span>
+    <span class="short-copyright"><br>©2018 Sidewalk Toronto</span>
+  </div>
+
+  <!-- Expanded Image Slideshow -->
+  <div style="display:none;" id="expanded">
+    <div class="expanded-panel mdl-shadow--8dp">
+      <div id="exit-slideshow" class="exit" title="Exit Slideshow">
+        <svg width="26px" height="25px" viewBox="0 0 26 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Design" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1, 1)" stroke="#FFFFFF">
+            <path d="M0.934313984,23.103212 L23.065686,-0.00960637366" id="ex-copy" stroke-width="2" transform="translate(12.000000, 11.546803) scale(1, -1) rotate(90.000000) translate(-12.000000, -11.546803) "></path>
+            <path d="M0.934313984,23.103212 L23.065686,-0.00960637366" id="ex-copy-2" stroke-width="2" transform="translate(12.000000, 11.546803) scale(-1, -1) rotate(90.000000) translate(-12.000000, -11.546803) "></path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="header">
+        <div class="logo">
+          <svg width="25px" height="36px" viewBox="0 0 25 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Design" stroke="none" stroke-width="1" fill-rule="evenodd" fill="#FFFFFF">
+              <path d="M12.5,0 C5.58928571,0 0,5.634 0,12.6 C0,22.05 12.5,36 12.5,36 C12.5,36 25,22.05 25,12.6 C25,5.634 19.4107143,0 12.5,0 L12.5,0 Z M12,16 C9.792,16 8,14.208 8,12 C8,9.792 9.792,8 12,8 C14.208,8 16,9.792 16,12 C16,14.208 14.208,16 12,16 L12,16 Z" id="Pin"></path>
+            </g>
+          </svg>
+        </div>
+        <h6 class="exit">Old Toronto</h6>
+        <div id="filtered-slideshow">
+          Only showing photos between
+            <span id="slideshow-filter-first"></span> and <span id="slideshow-filter-last"></span>.
+          <a href="#" id="slideshow-all">Show all.</a>
+        </div>
+      </div>
+
+      <div id="grid-container"></div>
+    </div>
+  </div>
+
+  <div id="image-details-template" style="display: none;">
+    <div class="inline-close">
+      <svg width="26px" height="25px" viewBox="0 0 26 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1, 1)" stroke="#FFFFFF">
+          <path d="M0.934313984,23.103212 L23.065686,-0.00960637366" id="ex-copy" stroke-width="2" transform="translate(12.000000, 11.546803) scale(1, -1) rotate(90.000000) translate(-12.000000, -11.546803) "></path>
+          <path d="M0.934313984,23.103212 L23.065686,-0.00960637366" id="ex-copy-2" stroke-width="2" transform="translate(12.000000, 11.546803) scale(-1, -1) rotate(90.000000) translate(-12.000000, -11.546803) "></path>
+        </g>
+      </svg>
+    </div>
+    <img class="inline-image"> <!-- note: this is only used on mobile -->
+    <div class="details">
+      <div class="caption1"><a target="_blank" class="link" href="">City of Toronto Archives</a></div>
+      <div class="title"></div>
+
+      <div class="value scope"></div>
+
+      <div class="label">Date of Creation</div>
+      <div class="value date"></div>
+
+      <div class="label physical_desc">Physical Description</div>
+      <div class="value physical_desc"></div>
+
+      <div class="label">Archival Citation</div>
+      <div class="value"><a target="_blank" class="link citation" href=""></a></div>
+
+      <div class="label">Access conditions</div>
+      <div class="value condition"></div>
+
+      <div style="display:none" class="geocode-debug"></div>
+
+      <div class="feedback-link">
+        Wrong location?
+        <a href='#' class="feedback-button" target="_blank">Help us fix it.</a>
+      </div>
+
+      <div class="social">
+        <div class="copy-link" data-clipboard-text="">
+          <span class="octicon octicon-clippy"></span>
+          <span class="email-share">Copy Link</span>
+        </div>
+        <div class="tweet"></div>
+        <div class="facebook-holder"></div>
+      </div>
+    </div>
+  </div>
+  <iframe name="hiddenFrame" class="hide"></iframe>
+
+  <div id="image-details-left-template" style="display: none;">
+  </div>
+
+  <div id="og-close-template" style="display: none;">
+  </div>
+
+  <div style="position: absolute; left: -1000px;">
+    <img src="images/blank.gif" />
+    <img src="images/spinner.gif" />
+  </div>
+
+  <!-- Google Maps API -->
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=<%= apikey %>">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <meta name="twitter:widgets:csp" content="on">
+  <script src="//platform.twitter.com/widgets.js"></script>
+
+  <script src="/api/oldtoronto/lat_lng_counts?var=lat_lons"></script>
+  <script src="js/vendor/vendor-all.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79490400-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '2108356419393638',
+      xfbml: true,
+      version: 'v2.12'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>

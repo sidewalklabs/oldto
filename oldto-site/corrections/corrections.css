@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'Montserrat';
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+.heading {
+  margin: 24px auto;
+  position: relative;
+}
+
+span.TitleLogo2 {
+  text-transform: uppercase;
+}
+
+.heading > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mapleleaf {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.feedback-about {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 21px;
+  margin-top: 6px;
+}
+
+.feedback-about a {
+  background: #000000aa;  /* TODO(danvk): this should be a multiply blend */
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 6px 11px;
+  margin-right: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),
+              0 1px 10px 0 rgba(0,0,0,.12),
+              0 2px 4px -1px rgba(0,0,0,.2)
+}
+
+div#content-area {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.body {
+  background: white;
+}
+
+.container {
+  display: flex;
+}
+
+.details a, .details a:visited {
+  text-decoration: none;
+  color: #0072CE;
+}
+
+.header h6 {
+  color: white;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.details .label {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.details .value {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+.details .title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 20px auto;
+}
+
+h1 {
+  margin: 10px auto;
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height:  400px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.outputside {
+  overflow: visible;
+  margin-left: auto;
+}
+
+.container {
+  display:flex;
+  padding: 10px;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 350px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+
+body {
+  margin: 0 1em;
+}
+.outputside {
+  margin-left: 1em;
+}
+
+#no-location, #submit {
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+#submit {
+  float: right;
+}
+
+.inputside img {
+  max-height: 600px;
+  max-width: 100%;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px auto;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+button#reset {
+  font-size: 12px;
+  float: right;
+  margin-right: 6px;
+}
+
+.inputside, .outputside {
+  flex: 50%;
+}
+
+iframe.hide {
+  position:absolute;
+  top:-1px;
+  left:-1px;
+  width:1px;
+  height:1px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.popup {
+  background: rgb(173, 207, 240);
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.popup h4 {
+  margin-bottom: 0;
+}

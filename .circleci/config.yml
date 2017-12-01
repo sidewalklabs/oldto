@@ -1,0 +1,157 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: danvk/yarn-python36:0.0.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v2-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "oldto-site/yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v2-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3.6 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+            cd oldto-site
+            yarn
+
+      - save_cache:
+          paths:
+            - ./venv
+            - ~/.yarn
+            - ~/.cache/yarn
+          key: v2-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "oldto-site/yarn.lock" }}
+
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            flake8
+            nosetests
+            ./scripts/find-dead-code.sh
+            cd oldto-site
+            yarn lint
+
+
+  check-data:
+    docker:
+     - image: ubuntu:trusty
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: check geocoding pipeline data
+          command: ./scripts/check_data.sh
+
+  publish-docker:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - run: &setup_gcloud
+          name: Setup gcloud
+          command: |
+            echo ${GCP_SERVICE_ACCOUNT_KEY} | base64 -d > ${HOME}/gcp-key.json
+            gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
+            gcloud --quiet config set project nyc-tlc-1225
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Choose a tag
+          command: git rev-parse --short=8 HEAD > /tmp/tag
+      - run:
+          name: Build image
+          command: docker build . -t us.gcr.io/nyc-tlc-1225/swl-oldtoronto-web:$(cat /tmp/tag) --build-arg GMAPS_API_KEY=${GMAPS_API_KEY}
+      - run:
+          name: Push image
+          command: gcloud docker -- push us.gcr.io/nyc-tlc-1225/swl-oldtoronto-web:$(cat /tmp/tag)
+      - run:
+          name: Create K8s configs
+          command: |
+            mkdir /tmp/k8s
+            kubectl patch --local -o yaml -p \ '
+            {
+                "spec": {
+                    "template": {
+                        "spec": {
+                          "containers": [
+                                {
+                                    "name": "swl-oldtoronto-web",
+                                    "image": "us.gcr.io/nyc-tlc-1225/swl-oldtoronto-web:'$(cat /tmp/tag)'"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }' -f ./web-deployment.yaml > /tmp/k8s/web-deployment.yaml
+
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - k8s
+  deploy-staging:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          <<: *setup_gcloud
+      - run:
+          name: Apply K8s configs
+          command: |
+            gcloud container clusters get-credentials staging --zone=us-east1-b
+            kubectl apply -f /tmp/k8s/*yaml
+  deploy-production:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          <<: *setup_gcloud
+      - run:
+          name: Apply K8s configs
+          command: |
+            gcloud container clusters get-credentials prod --zone=us-east1-b
+            kubectl apply -f /tmp/k8s/*yaml
+
+
+workflows:
+  version: 2
+  build-and-publish:
+    jobs:
+      - build
+      - check-data
+      - publish-docker:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - deploy-staging:
+          requires:
+            - publish-docker
+          filters:
+            branches:
+              only: master
+      - hold:
+          type: approval
+          requires:
+            - deploy-staging
+      - deploy-production:
+          requires:
+            - hold

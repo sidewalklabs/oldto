@@ -1,0 +1,103 @@
+# This file contains place names that can't be uniquely geocoded.
+playground
+stone
+flower
+presbyterian church
+salvation army
+mural
+library building
+sheraton
+synagogue
+no shoes
+chapel
+baptist church
+laurier
+waterfall
+water feature
+cannon
+holiday inn
+funeral home
+africa
+hilton
+four seasons
+quarry
+sir winston churchill
+park square
+park motel
+conservation area
+coasters
+the fly
+
+# These were found manually, see
+https://docs.google.com/spreadsheets/d/1EhVWlqKJeUXx7f69aFtJBT_ofRMm-yAK2ofMbQ5iwsk/edit
+st. george
+new york
+humber river
+don river
+st. clair
+toronto maple leafs
+lake ontario
+mount pleasant
+dundas west
+st. patrick
+forest hill village
+mary pickford
+belt line
+pumping station
+queen victoria
+santa claus parade
+mimico creek
+maple leafs
+west don river
+lower simcoe
+athletic club
+public health
+etobicoke creek
+fire station
+hazelton lanes
+blue jays way
+canadian national railway
+william lyon mackenzie
+canadian red cross
+martin goodman trail
+
+# A few more blacklisted items from Ryan:
+confederation life
+black creek
+sir adam beck
+toronto hydro
+east tower
+john deere
+air canada
+canadian tire
+clock tower
+kentucky fried chicken
+royal canadian legion
+sir john a. macdonald
+south tower
+south entrance
+studio theatre
+university apartments
+paint shop
+sixteen mile creek
+south kingsway
+canada goose
+canada post
+coin laundry
+dry cleaners
+foto grocery
+new building
+ontario chrysler
+parking lot
+picture framing
+pioneer village
+radio city
+the dominion bank
+the pasture
+the quebec
+the way
+toronto public library
+toronto transit commission
+
+# Post-launch blacklist
+toronto star

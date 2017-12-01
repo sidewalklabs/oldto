@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: swl-oldtoronto-web
+  name: swl-oldtoronto-web
+spec:
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: swl-oldtoronto-web
+    spec:
+      containers:
+      - image: us.gcr.io/nyc-tlc-1225/swl-oldtoronto-web
+        name: swl-oldtoronto-web
+        ports:
+        - containerPort: 80
+      restartPolicy: Always

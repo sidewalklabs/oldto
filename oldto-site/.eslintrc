@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "lat_lons": false,
+    "Firebase": false,
+    "ga": false,
+    "google": false,
+    "FB": false,
+    "ZeroClipboard": false,
+    "twttr": false
+  },
+  "rules": {
+    "no-console": 0,
+    "eqeqeq": 2
+  }
+}

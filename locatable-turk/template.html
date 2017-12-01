@@ -1,0 +1,92 @@
+<div class="instructions">
+  <p>Thanks for helping to map <a href="http://gencat.eloquent-systems.com/toronto.html">Toronto's History</a>!
+  </p>
+
+  <p>
+    If you can determine exactly where the image was taken, click <b>Locatable!</b>
+    and <b>drag</b> the marker to the right place on the map. You can use the <b>search box</b>
+    to find named places ("High Park"), addresses ("140 Yonge") or cross streets
+    ("Queens Quay and Bay"). If it's not clear where the image was taken or if the location
+    is too general ("University of Toronto"), click <b>Not Locatable</b>. It's OK!
+  </p>
+
+  <p>
+    Feel free to go to the Archives site or to your favorite search engine to do extra sleuthing.
+    And write anything interesting you notice or discover in the "Notes" box. Anyone from the
+    Sidewalk Labs team would be thrilled to answer any questions. Thanks!!!
+  </p>
+</div>
+
+<div class="container">
+  <div class="inputside" >
+    <h2>Here's a Toronto Archives image…</h2>
+    <a href="https://gencat.eloquent-systems.com/city-of-toronto-archives-m-permalink.html?key=${uniqueID}" target="_blank"><img border=0 style="max-height: 600px" src="${imageLink}"
+      /></a>
+
+    <ul id="metadata">
+      <li><a target="_blank" href="https://gencat.eloquent-systems.com/city-of-toronto-archives-m-permalink.html?key=${uniqueID}">${title}</a>
+        <img src="new-tab.png" width="12" height="12"></li>
+      <li>${date}</li>
+      <li>${scope}</li>
+      <li>Part of:
+        <a target="_blank" href="https://gencat.eloquent-systems.com/city-of-toronto-archives-m-permalink.html?key=${parent_uniqueID}">${part_of}</a>
+        <img src="new-tab.png" width="12" height="12"></li>
+      <ul>
+        <li>${parent_title}</li>
+        <li>${parent_date}</li>
+        <li>${parent_desc}</li>
+        <li>${parent_scope}</li>
+      </ul>
+    </ul>
+  </div>
+  <div class="outputside">
+    <h2>…for you to pin on the map</h2>
+    <input id="pac-input" class="controls" type="text" placeholder="Search for an address, cross streets or a place name" />
+    <div id="map"></div>
+      <fieldset id="geolocatable-radio">
+        <input type="radio" id="loc-yes" name="geolocatable" value="Locatable">
+        <label for="loc-yes">&nbsp;Locatable!</label><br/>
+        <input type="radio" id="loc-maybe" name="geolocatable" value="Maybe">
+        <label for="loc-maybe">&nbsp;Might be locatable with some research</label><br/>
+        <input type="radio" id="loc-no" name="geolocatable" value="Not Locatable">
+        <label for="loc-no">&nbsp;Not Locatable</label><br/>
+      </fieldset>
+
+      <h4>Manually Input Date Range</h4>
+      <fieldset id="date-range-radio">
+        <input type="radio" id="date-yes" name="datable" value="yes">
+        <label for="date-yes">&nbsp;Start Year: </label>
+        <input type="text" id="date-start" name="date_start" size=25 pattern="[0-9]{1,4}" placeholder="YYYY"/>
+        &nbsp;End: <input type="text" id="date-end" name="date_end" size=25 pattern="[0-9]{1,4}" placeholder="YYYY"/>
+        <br />
+        <input type="radio" id="date-no" name="datable" value="no">
+        <label for="date-no">&nbsp;No date</label>
+      </fieldset>
+
+      <p class="date-instructions">
+        If there's only a single date, leave the "end" field blank. Only the year is important.<br>
+        If there's only a range of dates ("1990-1995"), fill in both the start and end year fields.
+      </p>
+
+      <hr/>
+      <h4>Comments and Additional Notes:</h4>
+      <textarea cols="80" rows="5" name="user_notes" placeholder="Any additional notes: how did you figure out where the image was? Anything interesting about it?"></textarea><br>
+
+      <button type="submit" id="submit">Submit</button>
+      <input type="hidden" name="latLng" value="" id="latLng">
+  </div>
+</div>
+
+</form>
+<form action="/delete-last" method="POST" style="display: inline-block">
+  <br><input type="submit" id="undo-button" data-key="z" value="Undo Last (z)">
+</form>
+
+<script src="init-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_6qku7T16w0xC0Xes9Rn-qKeZtBLS0hY&libraries=places&callback=initMap"
+  async defer></script>
+
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<form style="display:none">

@@ -1,0 +1,495 @@
+freq,name,osmid,lat,lng,score,OSM Name,Wiki
+3,Adam Beck Public School,2334556963,43.6832856,-79.2886957,60,Adam Beck Public School,
+16,Air Canada Centre,1000000019882585,43.6435132,-79.3790996,31,Air Canada Centre,en:Air Canada Centre
+36,Alexander Muir Memorial Gardens,1000000224893870,43.7212741,-79.4004774,30,Alexander Muir Memorial Gardens,
+3,Alexander Park,1000000034406591,43.8377095,-79.4865442,30,Alexander Park,
+3,All Saints Anglican Church,1000000093992886,43.9273616,-79.5271178,61,All Saints Anglican Church,"en:All Saints, King City"
+94,Allan Gardens,1000000224894996,43.6619387,-79.3743996,31,Allan Gardens,en:Allan Gardens
+5,Amesbury Park,1000000224895850,43.7061098,-79.4831586,30,Amesbury Park,
+5,Annesley Hall,1000000023436623,43.6678101,-79.3929754,6,Annesley Hall,en:Annesley Hall
+2,Architecture Building,1000000023447538,43.6593338,-79.3779202,5,Architecture Building,
+2,Arena Gardens,1000000224897357,43.655872,-79.375574,30,Arena Gardens,
+11,Argonaut Rowing Club,1000000033805683,43.6320266,-79.4360343,5,Argonaut Rowing Club,
+3,Armour Heights Public School,1000000035674358,43.7411912,-79.4195871,60,Armour Heights Public School,
+2,Ashbridges Bay,555446744,43.6603169,-79.3151711,0,Ashbridges Bay,
+1,Astron Electrical Contractors,5057261751,43.6957156,-79.3399291,0,Astron Electrical Contractors,
+29,Automotive Building,1000000028938494,43.6337712,-79.4105131,6,Beanfield Centre,en:Exhibition Place
+46,BCE Place,1000000034111206,43.6472158,-79.3783011,5,Brookfield Place,
+11,Baird Park,1000000224915100,43.6623661,-79.4625989,30,Baird Park,
+4,Balmy Beach,1000000224916384,43.6694483,-79.2865782,30,Balmy Beach,
+4,Balmy Beach Club,1000000043808622,43.669983,-79.2863705,5,Balmy Beach Club,
+13,Banting Institute,1000000022914055,43.6605821,-79.3886232,5,Banting Institute,
+1,Bata Shoe Museum,1000000022372216,43.6672516,-79.4001431,41,Bata Shoe Museum,en:Bata Shoe Museum
+26,Bathurst Station,2000000007281889,43.6657302,-79.4116188,1,Bathurst Station,en:Bathurst (TTC)
+24,Bay Adelaide Centre,1000000025108215,43.6503255,-79.3804891,6,Bay-Adelaide Centre West,en:Bay Adelaide Centre
+1,Beardmore Building,1000000108058907,43.6475707,-79.3747303,5,Beardmore Building,
+2,Bell Canada,1000000031363304,43.7277814,-79.2977333,5,Bell Canada,
+2,Bellevue Square,1000000224932904,43.6535196,-79.4023305,30,Bellevue Square,
+121,Berczy Park,1000000224933152,43.6480044,-79.375157,30,Berczy Park,
+5,Beresford Park,1000000224933155,43.6561188,-79.4803348,30,Beresford Park,
+7,Best Institute,1000000022914063,43.6604615,-79.3892521,5,Best Institute,
+4,Beth Tzedec Synagogue,1000000043808645,43.6955518,-79.4243526,60,Beth Tzedec Synagogue,
+4,Better Living Centre,1000000149476927,43.6317246,-79.4207381,5,Better Living Centre,
+1,Bialik Hebrew Day School,1000000172228328,43.8529831,-79.4651365,60,Bialik Hebrew Day School,
+2,Bickford Park,1000000225007153,43.6609855,-79.4186672,30,Bickford Park,
+1,Bingham Loop,540244289,43.68153,-79.2849552,0,Bingham Loop,
+2,Bishop Strachan School,1000000035491471,43.6908207,-79.409199,61,Bishop Strachan School,en:Bishop Strachan School
+7,Black Creek Pioneer Village,365667572,43.7745365,-79.5179164,41,Black Creek Pioneer Village,en:Black Creek Pioneer Village
+1,Bloor Collegiate Institute,1000000015637191,43.6590393,-79.4369503,61,Bloor Collegiate Institute,en:Bloor Collegiate Institute
+1,Bloor Street United Church,1000000043808595,43.6673994,-79.4020259,61,Bloor Street United Church,en:Bloor Street United Church
+1,Bobbie Rosenfeld Park,2000000003201331,43.6418631,-79.3873694,30,Bobbie Rosenfeld Park,
+1,Boiler House,1000000112757692,43.6388262,-79.4251901,5,Boiler House,
+7,Bond Lake,1000000160544483,43.9342658,-79.4481443,0,Bond Lake,
+1,Branksome Hall,1000000026766705,43.6745674,-79.3813945,60,Branksome Hall,
+3,Brant Street School,1000000030860744,43.6458,-79.3982337,60,Brant Street School,
+1,Brentwood Towers,1000000032052205,43.6959401,-79.3993008,5,Brentwood Towers,
+5,Budd Sugarman Park,1000000225618381,43.6760708,-79.3886553,30,Budd Sugarman Park,
+6,Burwash Hall,1000000012873850,43.6668431,-79.3910028,6,Burwash Hall,en:Burwash Hall
+101,C. N. E.,1000000004164234,43.633751,-79.4192546,41,Exhibition Place,en:Exhibition Place
+441,C.N.E.,1000000004164234,43.633751,-79.4192546,41,Exhibition Place,en:Exhibition Place
+278,CN Tower,368385388,43.6425012,-79.3871153,41,CN Tower Edge Walk,en:CN Tower
+1289,CNE,1000000004164234,43.633751,-79.4192546,41,Exhibition Place,en:Exhibition Place
+1,Calvin Presbyterian Church,1000000043805667,43.6891841,-79.3960554,61,Calvin Presbyterian Church,en:Calvin Presbyterian Church (Toronto)
+27,Campbell House,1000000027778549,43.6510527,-79.387322,40,Campbell House,
+2,Canada Life,1000000034121572,43.6516695,-79.3876048,6,Canada Life,en:Canada Life Building
+39,Canada Life Building,1000000034121572,43.6516695,-79.3876048,6,Canada Life,en:Canada Life Building
+4,Canada Malting Silos,1000000043806399,43.6351684,-79.3961842,6,Canada Malting Silos,en:Canada Malting Silos
+2,Canada Permanent Building,778766345,43.6495196,-79.3808418,5,Canada Permanent Building,
+1,Canada Square Complex,1000000034228021,43.7060858,-79.3985101,6,Canada Square,en:Canada Square Complex
+1,Canadian Broadcasting Centre,1000000007969162,43.6448416,-79.3881442,6,Canadian Broadcasting Centre,en:Canadian Broadcasting Centre
+4,Canadian Legion,1000000079581869,43.6445576,-79.5253801,5,Tridel,
+100,Canadian National Exhibition,1000000004164234,43.633751,-79.4192546,41,Exhibition Place,en:Exhibition Place
+25,Carlton Park,1000000024008078,43.666453,-79.4554408,30,Carlton Park,
+224,Casa Loma,1000000198471666,43.6781104,-79.4093794,41,Casa Loma,en:Casa Loma
+32,Castle Frank,2707352281,43.6734334,-79.3691423,6,Castle Frank,
+3,Centennial Park,1000000034084528,43.6532121,-79.589953,31,Centennial Park,en:Centennial Park (Toronto)
+1,Central Maintenance Garage,1000000334483355,43.6608913,-79.3268115,0,Central Maintenance Garage,
+4,Central Steam Plant,1000000020174304,43.6599806,-79.3978616,5,Central Steam Plant,
+9,Central Technical School,1000000013866949,43.6629368,-79.4089242,61,Central Technical School,en:Central Technical School
+225,Centre Island,5069807421,43.620823,-79.3780909,40,Centre Island,
+1,Centre Island Park,2447291688,43.6152238,-79.3772787,30,Centre Island Park,
+30,Cherry Beach,1000000232951663,43.6405436,-79.3382656,30,Cherry Beach,
+32,Chorley Park,1000000026951750,43.6862317,-79.3701684,30,Chorley Park,
+55,Christ Church,1373368729,43.967283,-79.2534647,60,Christ Church,
+9,Christie Gardens,1000000035040144,43.6739606,-79.4230003,5,Christie Gardens,
+626,City Hall,1000000198500761,43.6535702,-79.3839426,61,Toronto City Hall,en:Toronto City Hall
+1,Claireville Conservation Area,1000000266605849,43.7434564,-79.639752,3,Claireville Conservation Area,
+29,Clarence Square,1000000007969155,43.6441235,-79.3936867,31,Clarence Square,en:Clarence Square
+5,Claridge Apartments,1000000106104323,43.6830556,-79.4003611,5,Claridge Apartments,
+4,Cloud Gardens,1000000025822841,43.6511713,-79.3797654,30,Cloud Gardens,
+8,Cloverdale Mall,1000000031963720,43.6316711,-79.5551105,6,Cloverdale Mall,en:Cloverdale Mall
+3,Club Zanzibar,247703252,43.6580739,-79.3814822,7,Club Zanzibar,en:Zanzibar Tavern
+15,Colborne Lodge,256351459,43.6403622,-79.459996,40,Colborne Lodge,
+89,College Park,1000000022913944,43.6596396,-79.3838648,30,College Park,
+37,Commerce Court,3561927408,43.6477053,-79.3783001,0,Commerce Court,
+1,Commerce Court North,1000000043417400,43.6485895,-79.3790267,5,Commerce Court North,
+149,Confederation Life Building,1000000178090074,43.6520357,-79.3784349,5,Confederation Life Building,
+1,Consilium Place,1000000031616714,43.7779289,-79.2526046,6,Consilium Place,en:Consilium Place
+19,Convention Centre,2346826124,43.8458091,-79.3800937,6,Convention Centre,
+16,Convocation Hall,1000000330718925,43.6607762,-79.3954452,6,Convocation Hall,en:Convocation Hall (University of Toronto)
+21,Coronation Park,1000000185914131,43.6342499,-79.405651,31,Coronation Park,en:Coronation Park
+8,Council Chambers,1000000027767545,43.6534921,-79.3839616,0,Council Chambers,
+21,Courthouse Square,1000000025823287,43.6504693,-79.3754587,30,Courthouse Square,
+5,Credit River,2000000006889825,43.5503856,-79.6384816,1,Credit River,en:Credit River
+2,Crescent School,1000000043812218,43.7328646,-79.3789248,60,Crescent School,
+3,Czechoslovak Baptist Church,1000000296213732,43.6631866,-79.4688456,5,Czechoslovak Baptist Church,
+2,Daisy Mart,1000000116569733,43.5542648,-79.5842489,5,Daisy Mart,
+1,Danforth Baptist Church,1000000043805648,43.6768226,-79.3541538,60,Danforth Baptist Church,
+1,David A. Balfour Park,1000000013812833,43.6865402,-79.3872971,30,David A. Balfour Park,
+60,David Crombie Park,1000000206939076,43.6485796,-79.3677391,30,David Crombie Park,
+2,David Pecaut Square,1000000366014838,43.6464367,-79.3874869,0,David Pecaut Square,
+1,Davisville Village,555446824,43.7043123,-79.3885169,2,Davisville,en:Davisville Village
+3,De La Salle Institute,1000000219170378,43.6519074,-79.3706199,5,De La Salle Institute,
+3,Deer Park United Church,1000000043810929,43.6864456,-79.4001507,6,Deer Park United Church (closed),en:Deer Park United Church
+1,Delisle Court,1000000061011728,43.6895513,-79.3950351,5,Delisle Court,
+2,Dental Clinic,769480500,43.6593136,-79.3854634,6,Dental Clinic,
+6,Dentonia Park,1000000024787909,43.6936161,-79.2932731,30,Dentonia Park,
+48,Devonian Pond,1000000398994087,43.657527,-79.3797296,0,Devonian Pond,
+5,Devonian Square,4316541685,43.6576879,-79.379844,4,Devonian Square,
+9,Dineen Building,1000000217672218,43.6511056,-79.3791483,5,Dineen Building,
+1,Dixie Presbyterian Church,1000000071219184,43.5962853,-79.6014747,60,Dixie Presbyterian Church,
+31,Dominion Bank,3595344907,43.7916369,-79.4445218,6,Toronto Dominion Bank,
+3,Dominion Hotel,1000000184344340,43.6570101,-79.3591794,41,Dominion Hotel,"en:Dominion Hotel, Toronto"
+2,Dominion Public Building,1000000031728090,43.6460897,-79.3778137,5,Dominion Public Building,
+8,Don Rowing Club,1000000116293826,43.5509194,-79.5897561,5,Don Rowing Club,
+4,Don Station,4461160862,43.6415108,-79.3850183,0,Don Station,
+2,Don Valley Brick Works,277039070,43.6845606,-79.3654443,40,Don Valley Brick Works,
+3,Don Valley Golf Course,4471826078,43.7489685,-79.4113878,4,Don Valley Golf Course,en:List of golf courses in Canada
+22,Dovercourt Park,1000000009153060,43.6651764,-79.4335024,30,Dovercourt Park,
+5,Downsview Airport,1000000014346692,43.7440575,-79.4656662,1,Downsview Airport,en:Downsview Airport
+23,Dufferin Gate,23845384,43.6335344,-79.4252759,0,Dufferin Gate,
+7,Dufferin Grove Park,1000000015703371,43.6562079,-79.4324949,31,Dufferin Grove Park,en:Dufferin Grove Park
+4,Dufferin Loop,385037741,43.6343519,-79.4257854,6,Dufferin Loop,
+3,Dufferin Park,1000000031812179,43.6575626,-79.4339786,5,Dufferin Park,
+4,Eagle Manor,1000000031560610,43.7005535,-79.5159965,5,Eagle Manor,
+1,Earl Haig Public School,1000000025420433,43.6811515,-79.3213274,60,Earl Haig Public School,
+3,Earlscourt Park,1000000032255263,43.6733412,-79.4515035,30,Earlscourt Park,
+4,East Don River,1962158481,43.81703,-79.411416,6,East Don River,
+2,East General Hospital,1000000447744987,43.6899416,-79.3249287,7,Michael Garron Hospital,en:Toronto East General Hospital
+5,East Lynn Park,1000000024460930,43.6841942,-79.3153146,30,East Lynn Park,
+4,East Toronto Athletic Field,1000000024399080,43.68552,-79.2992699,30,East Toronto Athletic Field,
+13,Eastern Gap,555446606,43.6335521,-79.3505172,0,Eastern Gap,
+396,Eaton Centre,400926979,43.6541053,-79.3802815,6,Toronto Eaton Centre,
+5,Eaton Hall,1000000094091351,43.9617699,-79.5205963,6,Eaton Hall,en:Eaton Hall (King City)
+2,Edward Hanlan,3524674519,43.6276722,-79.3894048,0,Edward Hanlan,
+26,Edwards Gardens,560681514,43.7329543,-79.3599894,31,Edwards Gardens,en:Edwards Gardens
+5,Egerton Ryerson,4305346784,43.6580493,-79.3790424,0,Egerton Ryerson,
+1,Eglinton Park,1000000025680414,43.707473,-79.4053162,31,Eglinton Park,en:Eglinton Park (Toronto)
+3,Eglinton West,5320359167,43.7000695,-79.4363863,2,Eglinton West,
+1,Elm Park,1000000032533811,43.7697331,-79.5240968,5,Elm Park,
+9,Emmanuel College,1000000204323317,43.666724,-79.3926267,6,Emmanuel College,"en:Emmanuel College, Toronto"
+1,Enercare Centre,1000000227711309,43.635314,-79.4132211,7,Enercare Centre,en:Direct Energy Centre
+8,Engineering Annex,1000000023433288,43.6596061,-79.3954232,5,Engineering Annex,
+1,Eric Palin Hall,1000000023447542,43.6596147,-79.3774417,5,Eric Palin Hall,
+1,Evangel Temple,1000000134822214,43.7472836,-79.4084772,60,Evangel Temple,
+119,Exhibition Place,1000000004164234,43.633751,-79.4192546,41,Exhibition Place,en:Exhibition Place
+1,Factory Theatre,343276983,43.6455029,-79.4028205,7,Factory Theatre,en:Factory Theatre
+2,Falconer Hall,1000000012000657,43.6667134,-79.3939344,5,Falconer Hall,
+4,Fantasy Farm,1000000194146570,43.6873306,-79.3595074,40,Fantasy Farm,
+4,Far Enough Farm,1000000192579339,43.6199072,-79.3713301,40,Far Enough Farm,
+2,Ferry Dock,2447291976,43.6223538,-79.3784443,0,Ferry Dock,
+23,First Baptist Church,1000000122169599,43.6546249,-79.3964088,60,First Baptist Church,
+18,First Canadian Place,1000000027767627,43.6487661,-79.3816917,6,First Canadian Place,en:First Canadian Place
+9,Flatiron Building,1000000300884214,43.6483766,-79.3743019,6,Gooderham Building,en:Gooderham Building
+4,Flavelle House,1000000012000629,43.6661332,-79.393908,5,Flavelle House,
+4,Food Building,1000000034530514,43.6345731,-79.4195686,5,Toronto Star Food Building,
+41,Forest School,1000000043805272,43.6512511,-79.4635544,60,Forest School,
+1,Fort York Armoury,1000000031728091,43.6368785,-79.408048,6,Fort York Armoury/Manège Militaire Fort York,en:Fort York Armoury
+3,Frost Building,1000000023437176,43.6610326,-79.3896066,6,Frost Building South,en:Frost Building
+2,Frost Building North,1000000023437199,43.6616101,-79.3890573,6,Frost Building North,en:Frost Building
+2,Galbraith Building,2000000000076177,43.6598312,-79.3961373,5,Galbraith Building,
+22,Garrison Common,1000000083327917,43.6384113,-79.4069033,30,Garrison Common,
+11,General Hospital,1000000031825723,43.6586108,-79.3881449,7,Toronto General Hospital,en:Toronto General Hospital
+1,General Mills,1000000034582589,43.6543258,-79.6195845,5,General Mills,
+2,George Brown,2020836809,43.6616892,-79.3914921,0,George Brown,
+30,George Brown College,1000000181906001,43.6439865,-79.3655763,6,George Brown College,
+1,George Ignatieff Theatre,1000000027291427,43.6658416,-79.3971179,6,George Ignatieff Theatre,
+2,Gerald Larkin Building,1000000023113405,43.6656737,-79.3969448,5,Gerald Larkin Building,
+1,Gerstein Science Information Centre,1000000012874564,43.6620866,-79.3936387,61,Gerstein Science Information Centre,en:Gerstein Science Information Centre
+1,Ghoster Coaster,1000000189872600,43.8435209,-79.5457974,40,Ghoster Coaster,
+9,Gibraltar Point,2447291693,43.6134315,-79.3912734,0,Gibraltar Point,
+5,Gibraltar Point Lighthouse,555139142,43.6136678,-79.385316,0,Gibraltar Point Lighthouse,
+1,Glebe Mart,518304248,43.6898627,-79.320191,0,Glebe Mart,
+1,Gledhill Convenience,262919589,43.6935847,-79.3113831,0,Gledhill Convenience,
+7,Glen Grove,558715681,43.8432408,-79.0736894,1,Glen Grove,
+8,Glen Stewart Park,1000000028158259,43.6746978,-79.294509,30,Glen Stewart Park,
+5,Gooderham Building,1000000300884214,43.6483766,-79.3743019,6,Gooderham Building,en:Gooderham Building
+2,Grace Church,1000000082251106,43.7949863,-79.141079,60,Grace Church,
+1,Grace Toronto Church,1000000060609204,43.6622763,-79.3762026,61,Grace Toronto Church,en:Grace Toronto Church
+9,Grange Park,1000000005686871,43.6521701,-79.3922199,31,Grange Park,en:Grange Park (Toronto)
+10,Granite Club,1000000346243057,43.733484,-79.3822954,5,Granite Club,
+3,Greenwin Square,1000000062004751,43.6716063,-79.3780366,5,Greenwin Square,
+193,Grenadier Pond,1000000174225267,43.6434152,-79.466631,0,Grenadier Pond,
+4,Gwendolyn MacEwen Park,1000000008103403,43.6686917,-79.406226,30,Gwendolyn MacEwen Park,
+3,HMCS York,1000000179462465,43.6343441,-79.4027469,1,H.M.C.S. York,en:HMCS York
+13,Harbord Collegiate,1000000004299743,43.6615296,-79.4144031,61,Harbord Collegiate Institute,en:Harbord Collegiate Institute
+3,Harbord Collegiate Institute,1000000004299743,43.6615296,-79.4144031,61,Harbord Collegiate Institute,en:Harbord Collegiate Institute
+100,Harbour Square,404524674,43.6402122,-79.3770173,5,Harbour Square,
+55,Harbour Square Park,1000000034720944,43.6399124,-79.3763505,30,Harbour Square Park,
+2,Harbourfront Centre,1000000179154092,43.6385904,-79.3833246,41,Harbourfront Centre,en:Harbourfront Centre
+47,Hart House,2000000000001989,43.6639256,-79.3944745,6,Hart House,en:Hart House (University of Toronto)
+5,Haultain Building,1000000023433306,43.6599224,-79.3936379,5,Haultain Building,
+13,Havergal College,1000000034315339,43.7205075,-79.4130464,61,Havergal College,en:Havergal College
+1,Health Centre,869738556,43.7851033,-79.3100123,6,Health Centre,
+5,Hearn Generating Station,1000000232951664,43.6470763,-79.3344443,6,Richard L. Hearn Thermal Generating Station (closed),en:Hearn Generating Station
+2,High Park Club,1000000023426569,43.6426531,-79.4538746,5,High Park Club,
+3,High Park Loop,1000000009454822,43.6480965,-79.4579374,0,High Park Loop,
+5,High Park Zoo,1000000023661410,43.6435651,-79.4626984,41,High Park Zoo,en:High Park
+5,Hillcrest Park,1000000015804201,43.67596,-79.4244598,30,Hillcrest Park,
+10,Holt Renfrew,1000000034121937,43.670334,-79.3882326,6,Holt Renfrew Centre,en:Holt Renfrew
+1,Holy Rosary Church,1000000043806459,43.6845439,-79.4138889,60,Holy Rosary Church,
+3,Holy Trinity Church,1000000157787345,43.814174,-79.4275484,60,Holy Trinity Church,
+1,Home Depot,1000000032706572,43.7317283,-79.4527476,5,Home Depot,
+12,Horse Palace,1000000149476923,43.6351767,-79.4171667,5,Horse Palace,
+12,Horticulture Building,1000000173199197,43.8241523,-79.185093,5,Horticulture Building,
+3,Humane Society,615965404,43.65763,-79.3563427,0,Toronto Humane Society,
+1,Humewood House,1000000128948584,43.6841402,-79.4273952,6,Humewood House,
+5,Imperial Oil Building,1000000035491458,43.6866626,-79.3994865,6,Imperial Plaza,en:Imperial Oil Building
+2,Inglenook Community High School,1000000224675977,43.6540841,-79.3592089,61,Inglenook Community School,en:Inglenook Community High School
+5,Innis College,1000000022372215,43.6656204,-79.399593,5,Innis College,
+1,Intercontinental Hotel,5056646721,43.6443985,-79.3854265,40,Intercontinental Hotel,
+40,Island Filtration Plant,2447292042,43.6145116,-79.3805696,0,Island Filtration Plant,
+22,Island Park,3600909469,43.6271544,-79.3896265,4,Toronto Island Park,
+2,Island Water Treatment Plant,1000000193612062,43.615068,-79.3821395,0,Island Water Treatment Plant,
+1,Island Yacht Club,2447292043,43.6242714,-79.3867066,6,Island Yacht Club,
+1,Jarvis Street Baptist Church,1000000043808601,43.660784,-79.375335,61,Jarvis Street Baptist Church,en:Jarvis Street Baptist Church
+2,Jean Sibelius Square,1000000007913126,43.6714378,-79.4087966,30,Jean Sibelius Square,
+1,Jersey Giant,380041269,43.6485641,-79.3731576,6,Jersey Giant,
+1,John Street Roundhouse,1000000024008403,43.6408405,-79.385959,6,John Street Roundhouse,en:John Street Roundhouse
+16,Keating Channel,555446688,43.6484232,-79.3523241,0,Keating Channel,
+5,Kerr Hall,1000000020061267,43.6593781,-79.3796088,6,Kerr Hall North,en:Kerr Hall
+46,Kew Beach,1000000034387686,43.6658365,-79.2984142,0,Kew Beach,
+1,Kew Beach Junior Public School,1000000028713665,43.6686871,-79.3028369,60,Kew Beach Junior Public School,
+9,Kew Beach Park,1000000028866561,43.6672058,-79.2960444,30,Kew Beach Park,
+24,Kew Gardens,1000000024409805,43.668505,-79.2984166,30,Kew Gardens,
+204,King Edward Hotel,1000000062058559,43.6491889,-79.3760624,41,The Omni King Edward Hotel,en:King Edward Hotel (Toronto)
+90,King Station,697805124,43.6485227,-79.3777728,0,King Station,
+1,Kingsway Theatre,535036458,43.6473069,-79.5121819,6,Kingsway Theatre,
+1,Kitchen Food Fair,278045471,43.6932856,-79.2999579,0,Kitchen Food Fair,
+50,Knox College,1000000008101762,43.6596693,-79.4007352,6,1 Spadina Crescent,en:1 Spadina Crescent
+1,Knox United Church,1000000056051930,43.7860975,-79.2783037,61,Knox United Church,en:Knox United Church (Scarborough)
+7,Koffler House,1000000020319814,43.6605675,-79.400643,5,Koffler House,
+2,Koffler Student Services Centre,1000000008099717,43.6591667,-79.3968995,6,Koffler Student Services Centre,en:Koffler Student Centre
+1,Labor Lyceum,1000000103096652,43.6562867,-79.3962847,5,Toronto Labor Lyceum,
+1,Lakeview Park,1000000469978970,43.5742716,-79.555718,30,Lakeview Park,
+3,Lambton Golf Club,1000000031812130,43.6691439,-79.5069653,4,Lambton Golf Club,en:Lambton Golf Club
+2,Lassonde Building,1000000029003909,43.7739274,-79.5052406,5,Lassonde Building,
+10,Lassonde Mining Building,1000000012873543,43.6595254,-79.3934675,5,Lassonde Mining Building,
+7,Laura Secord,567243913,43.7780735,-79.3433613,0,Laura Secord,
+5,Lawrence Heights Community Centre,1000000043804455,43.7180907,-79.4421096,6,Lawrence Heights Community Centre,
+2,Lawrence West,55492958,43.7154925,-79.443913,2,Lawrence West,
+20,Leslie Street Spit,1000000189780702,43.6326988,-79.3324101,4,Tommy Thompson Park,en:Leslie Street Spit
+8,Little Norway Park,1000000022952584,43.634425,-79.3984881,31,Little Norway Park,en:Little Norway Park
+17,Little Trinity Anglican Church,1000000151179247,43.653152,-79.3618377,61,Little Trinity Anglican Church,en:Little Trinity Anglican Church
+1,Logan Convenience,373111394,43.6876259,-79.3531334,0,Logan Convenience,
+6,Long Branch Loop,1000000009454784,43.5919318,-79.5440341,0,Long Branch Loop,
+2,Long Branch Park,1000000205377393,43.5887082,-79.5300714,30,Long Branch Park,
+7,Long Pond,555446532,43.6201663,-79.3827007,0,Long Pond,
+2,Lord Lansdowne Public School,1000000019854553,43.6589364,-79.4018106,60,Lord Lansdowne Public School,
+1,MacMillan Theatre,5052350790,43.666722,-79.3946275,6,MacMillan Theatre,
+1,Mackenzie House,538153299,43.6557497,-79.3782498,41,Mackenzie House,en:Mackenzie House
+1,Main Building,1000000225377144,43.6532936,-79.3915884,5,Main Building,
+1,Malvern Collegiate Institute,1000000028204212,43.6826094,-79.2929337,31,Malvern Collegiate Institute,en:Malvern Collegiate Institute
+8,Manulife Centre,1000000085613576,43.6691703,-79.3884056,6,Manulife Centre,en:Manulife Centre
+897,Maple Leaf Gardens,1000000020060888,43.6621919,-79.3802902,31,Maple Leaf Gardens,en:Maple Leaf Gardens
+5,Maple Leaf Quay,1000000035980705,43.6386924,-79.3891371,5,Maple Leaf Quay,
+8,Market Lane Park,1000000403480278,43.6497313,-79.3724237,30,Market Lane Park,
+8,Market Square,1000000033406514,43.6492127,-79.3737139,5,Market Square,
+3,Masonic Temple,1000000059036049,43.6730806,-79.3882719,6,Masonic Temple,en:Masonic Temple (Toronto)
+4,Massey College,2000000000004323,43.6648417,-79.3975236,5,Massey College,
+66,Massey Hall,1000000062004062,43.6539659,-79.3789814,7,Massey Hall,en:Massey Hall
+3,Matt Cohen Park,1000000027765437,43.6663012,-79.4032883,30,Matt Cohen Park,
+2,Matty Eckler Playground,1000000041442047,43.6679996,-79.3384304,30,Matty Eckler Playground,
+1,Max Gluskin House,1000000022372209,43.6660549,-79.3997785,5,Max Gluskin House,
+9,McGill Parkette,1000000469489214,43.6598037,-79.3816442,30,McGill Parkette,
+2,McGregor Park,1000000023296908,43.6531555,-79.4421267,30,McGregor Park,
+8,McLaughlin Planetarium,1000000012000625,43.6669516,-79.3941569,6,McLaughlin Planetarium,en:McLaughlin Planetarium
+5,McLennan Physical Laboratories,1000000014748199,43.6610125,-79.3985019,5,McLennan Physical Laboratories,
+11,McMurrich Building,1000000023433608,43.6612699,-79.392926,5,McMurrich Building,
+4,McPherson Park,1000000045780717,43.8362966,-79.1191437,30,McPherson Park,
+13,Mechanical Engineering Building,1000000354180331,43.6600562,-79.3938368,5,Mechanical Engineering Building,
+9,Medical Sciences Building,1000000023433615,43.6609326,-79.3933739,5,Medical Sciences Building,
+1,Mel Lastman Square,1000000025033692,43.7676213,-79.4135428,1,Mel Lastman Square,en:Mel Lastman Square
+1,Memorial Pool,1570352041,43.648264,-79.5197262,3,Memorial Pool,
+30,Metro Hall,1000000096144517,43.6460472,-79.3887638,6,Metro Hall,en:Metro Hall
+1,Metro Square,1000000055462298,43.8189754,-79.3308019,5,Metro Square,
+1,Metro Toronto Convention Centre,1000000032023077,43.6438424,-79.3866247,7,Metro Toronto Convention Centre - North Building,en:Metro Toronto Convention Centre
+93,Metro Toronto Zoo,1000000229069541,43.8198517,-79.1853386,41,Toronto Zoo,en:Toronto Zoo
+38,Metropolitan United Church,1000000034007361,43.653924,-79.3766897,60,Metropolitan United Church,
+8,Monarch Building,1000000104945749,43.6439546,-79.3969959,5,Monarch Building,
+14,Monarch Park,1000000028156164,43.6777967,-79.3256589,30,Monarch Park,
+2,Moorevale Park,1000000224690270,43.6935274,-79.3822096,30,Moorevale Park,
+8,Moss Park Arena,380039751,43.654975,-79.370256,3,Moss Park Arena,
+4,Moss Park Armoury,1000000156242947,43.654651,-79.3728094,5,Moss Park Armoury,
+17,Mount Pleasant Cemetery,3511392093,43.6986034,-79.3734523,4,Mount Pleasant Cemetery,
+1,Mount Pleasant Road Baptist Church,1000000113572575,43.7023519,-79.3873321,60,Mount Pleasant Road Baptist Church,
+2,Mr. Barber,2782450924,43.6656873,-79.4792698,0,Mr. Barber,
+5,Mt. Pleasant,1186839109,43.7056974,-79.3888988,6,Mt. Pleasant,
+196,Nathan Phillips Square,2000000003201280,43.6524561,-79.3835543,1,Nathan Phillips Square,en:Nathan Phillips Square
+5,National Yacht Club,1000000217604711,43.6317275,-79.4021656,5,National Yacht Club,
+8,Ned Hanlan,3524674521,43.6276928,-79.3895597,4,Ned Hanlan,
+3,Neville Park Loop,1000000009454852,43.6738361,-79.2815295,0,Neville Park Loop,
+1,Newman Centre,1000000022201015,43.6644228,-79.3981613,5,Newman Centre,
+2,Newtonbrook United Church,2357815998,43.7871528,-79.414971,60,Newtonbrook United Church,
+1,Nordheimer Ravine,1000000015707476,43.6829561,-79.4128739,30,Nordheimer Ravine,
+1,North Toronto Collegiate Institute,1000000034227662,43.7092373,-79.3965658,61,North Toronto Collegiate Institute,en:North Toronto Collegiate Institute
+2,North York Central Library,349203862,43.7681311,-79.4147988,61,North York Central Library,en:North York Central Library
+5,North York General Hospital,1000000025574245,43.7694642,-79.362566,7,North York General Hospital,en:North York General Hospital
+1,Northern Ontario Building,778763903,43.6500608,-79.3810128,5,Northern Ontario Building,
+1,Northern Secondary School,1000000034227681,43.7106437,-79.3896134,61,Northern Secondary School,en:Northern Secondary School (Toronto)
+3,Norwood Park,1000000024399036,43.6823762,-79.303866,30,Norwood Park,
+1,Oak Park Deli,504410005,43.6938701,-79.3101397,6,Oak Park Deli,
+1,Oakwood Collegiate Institute,1000000015804206,43.6785134,-79.4367577,61,Oakwood Collegiate Institute,en:Oakwood Collegiate Institute
+2,Oakwood Loop,1000000530115850,43.6798661,-79.4346707,1,Oakwood Loop,en:Toronto streetcar loops#Oakwood Loop
+447,Old City Hall,2000000000003116,43.6525218,-79.381976,7,Old City Hall,en:Old City Hall (Toronto)
+5,Old Toronto,2000000002989349,43.6736522,-79.3856657,0,Old Toronto,
+7,Olympic Island,1000000007769093,43.6225453,-79.3747047,10,Olympic Island,
+5,Ontario Legislative Building,1000000015089986,43.6626128,-79.3916413,6,Ontario Legislative Building,en:Ontario Legislative Building
+406,Ontario Place,400115324,43.6286314,-79.4157281,41,Ontario Place (Closed for redevelopment),en:Ontario Place
+4,Ontario Provincial Police,1000000037854119,43.5682404,-79.5982764,6,Ontario Provincial Police,
+5,Oriole Yard,1000000207234267,43.7680227,-79.3658632,0,Oriole Yard,
+121,Osgoode Hall,2000000000037964,43.6521026,-79.3855358,7,Osgoode Hall,en:Osgoode Hall
+1,Osgoode Hall Library,1112049841,43.77103,-79.504089,60,Osgoode Hall Library,
+13,Outer Harbour,555446647,43.6331961,-79.3377423,0,Outer Harbour,
+15,Palace Pier,1000000204680765,43.631247,-79.4736226,0,Palace Pier,
+5,Palais Royale,1000000149303820,43.6366807,-79.4471548,5,Palais Royale,
+1,Park Lawn Cemetery,1000000028990027,43.6464999,-79.4998378,1,Park Lawn Cemetery,en:Park Lawn Cemetery
+1,Park Place,1000000076348292,43.5497454,-79.5919773,0,Park Place,
+4,Parkdale Collegiate Institute,1000000076700639,43.6394749,-79.4361778,60,Parkdale Collegiate Institute,
+1,Parliament Square,1342954593,43.649924,-79.361471,0,Parliament Square,
+1,Paul Kane House,1000000061014007,43.6658787,-79.3822605,5,Paul Kane House,
+1,Petticoat Creek,1000000163731458,43.8769602,-79.1884755,0,Petticoat Creek,
+1,Physical Geography Building,1000000015401957,43.6603861,-79.3965267,5,Physical Geography Building,
+1,Pickering Nuclear Generating Station,1000000035125981,43.8100683,-79.0662824,5,Pickering Nuclear Generating Station,
+2,Plaza Hotel,5056756024,43.7190145,-79.5145121,40,Toronto Plaza Hotel,
+2,Police Headquarters,1000000022913989,43.6613869,-79.3852397,7,Toronto Police Headquarters,en:Toronto Police Headquarters
+5,Polson Pier,1866034075,43.6419646,-79.3525591,3,Polson Pier,
+1,Portland Park,1000000211993823,43.6414885,-79.3995011,5,Portland Park,
+2,Portlands Energy Centre,1000000176711932,43.6495199,-79.3312536,5,Portlands Energy Centre,
+5,Post Office,682232907,43.6711128,-79.384647,6,Post Office,
+2,Postal Station K,2924044297,43.7173965,-79.4008789,6,Postal Station K,
+6,Press Building,1000000043804604,43.6330569,-79.4225647,5,Press Building,
+5,Prince Edward Viaduct,1000000195248139,43.6752212,-79.3638777,1,Prince Edward Viaduct,en:Prince Edward Viaduct
+2,Prospect Cemetery,1000000015132603,43.679919,-79.4532115,0,Prospect Cemetery,
+8,Pullan Place,1000000034587720,43.65105,-79.3884886,5,Pullan Place,
+3,Queen City Yacht Club,1000000193043084,43.6296163,-79.3581233,4,Queen City Yacht Club,en:Queen City Yacht Club (Toronto)
+4,Queen Elizabeth Building,1000000034530513,43.6330187,-79.420986,5,Queen Elizabeth Building,
+5,Queens Park,1000000207054558,43.6164736,-79.4930515,30,Queens Park,
+4,R.C. Harris Water Treatment Plant,264823128,43.6734119,-79.2789336,7,R.C. Harris Water Treatment Plant,en:R. C. Harris Water Treatment Plant
+1,RBC Waterpark Place III,1000000231268036,43.6411086,-79.3786582,6,RBC Waterpark Place III,en:RBC WaterPark Place
+20,Ramsden Park,1000000014801014,43.6763671,-79.3931736,30,Ramsden Park,
+3,Recreation Centre,1000000004958554,43.784679,-79.1859754,5,Recreation Centre,
+9,Redpath Sugar,1871493805,43.6426208,-79.3715697,41,Redpath Sugar Museum,en:Redpath Sugar
+1,Reference Library,1000000028156063,43.6718788,-79.3866649,61,Toronto Reference Library,en:Toronto Reference Library
+22,Richmond Hill,1000000055217965,43.8478032,-79.3839233,5,Richmond Hill,
+4,Riverdale Farm,281927817,43.6672949,-79.3599833,40,Riverdale Farm,
+142,Riverdale Park,1000000014345393,43.6699553,-79.3563469,31,Riverdale Park East,en:Riverdale Park (Toronto)
+1,Riverdale Park East,1000000014345393,43.6699553,-79.3563469,31,Riverdale Park East,en:Riverdale Park (Toronto)
+1,Riverdale Park West,1000000023973346,43.6664682,-79.360291,30,Riverdale Park West,
+24,Robarts Library,1000000007991747,43.6643889,-79.3994748,61,Robarts Library,en:Robarts Library
+1,Roncesvalles Carhouse,1000000015931594,43.6395576,-79.4478117,0,Roncesvalles Carhouse,
+5,Rose Avenue Junior Public School,1000000025795234,43.6699882,-79.3724336,60,Rose Avenue Junior Public School,
+4,Rosebrugh Building,1000000354180330,43.6600624,-79.3932672,5,Rosebrugh Building,
+1,Rosedale Golf Club,1000000003979646,43.7365012,-79.3919223,4,Rosedale Golf Club,en:Rosedale Golf Club
+2,Rosedale Park,1000000026951564,43.6827815,-79.3788651,30,Rosedale Park,
+119,Rosedale Station,2000000001407874,43.6766376,-79.3887489,5,Rosedale Station,
+3,Rosedale United Church,1000000204153813,43.6841349,-79.3722719,60,Rosedale United Church,
+26,Rosehill Reservoir,1000000043812768,43.6862182,-79.3886936,0,Rosehill Reservoir,
+1,Rosie Robin,67972743,43.663084,-79.4355109,0,Rosie Robin,
+8,Roundhouse Park,1000000197447516,43.6413075,-79.3852449,31,Roundhouse Park,en:Roundhouse Park
+26,Roy Thomson Hall,1000000141694015,43.6466254,-79.386368,7,Roy Thomson Hall,en:Roy Thomson Hall
+136,Royal Alexandra Theatre,1000000061429981,43.6473891,-79.3875825,7,Royal Alexandra Theatre,en:Royal Alexandra Theatre
+80,Royal Bank,48553584,43.6790726,-79.3451373,6,Royal Bank,
+16,Royal Bank Building,1000000033849166,43.7364042,-79.3441381,5,Royal Bank Building,
+2,Royal Canadian Curling Club,1000000300875756,43.6598448,-79.3499053,6,Royal Canadian Curling Club,en:Royal Canadian Curling Club
+41,Royal Canadian Yacht Club,1000000062003223,43.6685802,-79.3997535,6,The Royal Canadian Yacht Club,en:Royal Canadian Yacht Club
+3,Royal Oak,4407142403,43.6335203,-79.4070616,0,Royal Oak,
+60,Royal Ontario Museum,1000000004942687,43.6677062,-79.3946826,41,Royal Ontario Museum,en:Royal Ontario Museum
+80,Royal York,1000000031728160,43.645907,-79.3815116,41,Fairmont Royal York Hotel,en:Royal York
+215,Royal York Hotel,3694497629,43.6456804,-79.3823896,0,Royal York Hotel,
+2,Runnymede Park,1000000035984136,43.668327,-79.478801,31,Runnymede Park,en:Runnymede Park
+5,Russell Hill,5149802323,43.6853938,-79.4075628,0,Russell Hill,
+6,Ryerson Community Park,2454478150,43.6587799,-79.3804825,6,Ryerson Community Park,
+5,Ryerson Community School,1000000024263764,43.6512795,-79.4027867,60,Ryerson Community School,
+8,Ryerson University,1000000023250594,43.6581615,-79.3789028,61,Ryerson University,en:Ryerson University
+1,Sammon Convenience,279217371,43.6869797,-79.3348821,0,Sammon Convenience,
+8,Scadding Cabin,1000000176592140,43.6306867,-79.423991,40,Scadding Cabin,
+70,Scarborough Bluffs,540327247,43.7023607,-79.2388127,4,Scarborough Bluffs,
+1,Scarborough Civic Centre,1000000346553370,43.7723975,-79.2570781,60,Scarborough Civic Centre,
+1,Scarborough Heights Park,1000000043604224,43.6990852,-79.2508656,30,Scarborough Heights Park,
+12,Scotia Plaza,1000000141694075,43.6494944,-79.3795615,6,Scotia Plaza,en:Scotia Plaza
+13,Sculpture Gardens,1000000025823101,43.649854,-79.3736457,30,Sculpture Gardens,
+1,Seaton House,1000000030979556,43.6596649,-79.3740003,6,Seaton House,
+20,Sheraton Centre,5064121522,43.6511099,-79.3834953,40,Sheraton Centre,
+15,Sherway Gardens,1000000033290371,43.611971,-79.5572265,6,CF Sherway Gardens,en:Sherway Gardens
+3,Ship Channel,555446693,43.6457903,-79.3410194,0,Ship Channel,
+23,Sidney Smith Hall,1000000007948423,43.6624799,-79.3988138,5,Sidney Smith Hall,
+12,Simcoe Hall,1000000010336055,43.6607472,-79.3959493,5,Simcoe Hall,
+12,Simcoe Park,1000000023110977,43.6447417,-79.3868837,30,Simcoe Park,
+1,Simpson Tower,1000000034587440,43.6517736,-79.3810969,5,Simpson Tower,
+4,Sir Oliver Mowat,1721865834,43.6617705,-79.3920292,0,Sir Oliver Mowat,
+126,SkyDome,1000000007969701,43.6416417,-79.3892355,31,Rogers Centre,en:Rogers Centre
+13,South African War Memorial,555437367,43.6513145,-79.3868088,0,South African War Memorial,
+1,Sporting Life,1000000105142981,43.7163631,-79.4000075,5,Sporting Life,
+6,St. Andrew,5325990744,43.647836,-79.3848325,2,St. Andrew,
+220,St. Christopher House,902314183,43.6408906,-79.4163258,60,St. Christopher House,
+2,St. Clair Ravine,1000000028273737,43.7143991,-79.2749528,30,St. Clair Ravine,
+6,St. Clair Reservoir,1000000043812769,43.6837968,-79.4093365,0,St. Clair Reservoir,
+8,St. George Station,1000000062003382,43.6686536,-79.3980164,5,St. George Station,
+147,St. James Park,1000000023143716,43.6507796,-79.3733891,30,St. James Park,
+1,St. Lawrence Community Recreation Centre,2765967431,43.6496513,-79.3652302,6,St. Lawrence Community Recreation Centre,
+85,St. Lawrence Hall,1000000024626954,43.6501667,-79.3721787,6,St. Lawrence Hall,en:St. Lawrence Hall
+233,St. Lawrence Market,1000000024626769,43.6486929,-79.371571,61,St. Lawrence Market South,en:St. Lawrence Market
+2,St. Louis,417729414,43.7545768,-79.3573511,6,St. Louis,
+1,St. Michael Catholic School,4295671568,43.6478915,-79.3699556,60,St. Michael Catholic School,
+1,St. Regis,1000000025108216,43.6497774,-79.3802553,41,St. Regis,en:Trump International Hotel and Tower (Toronto)
+28,Stanley Barracks,1000000034530532,43.6327423,-79.4131483,5,Stanley Barracks,
+29,Stanley Park,1000000023689547,43.641897,-79.4087437,30,Stanley Park,
+1,Stewart Building,1000000070948818,43.6591989,-79.3919852,6,Stewart Building,en:Toronto Athletic Club
+1,Sun Life,1000000166535103,43.8478036,-79.4324693,5,Sun Life,
+1,Sun Life Centre,1000000179222093,43.6481785,-79.3843694,6,Sun Life Centre,en:Sun Life Centre
+32,Sunnybrook Park,1000000124416183,43.7259007,-79.3650986,31,Sunnybrook Park,en:Sunnybrook Park
+12,Sunnyside Beach,1000000033656404,43.6365863,-79.4506828,0,Sunnyside Beach,
+1,Sunnyside Pavillion,2000000002742665,43.6377197,-79.4563765,40,Sunnyside Pavillion,
+5,Surrey Place Centre,1000000034122117,43.6611346,-79.388748,5,Surrey Place Centre,
+3,Sutton Place Hotel,1000000033822425,43.6647857,-79.3869546,6,The Britt,en:Sutton Place Hotel
+4,Syl Apps,1000000043938743,43.4675096,-79.6834708,6,Syl Apps,
+88,Taylor Creek Park,1000000025480300,43.7029505,-79.324853,30,Taylor Creek Park,
+4,The Archer,2086306553,43.6528467,-79.3840293,40,The Archer,
+1,The Bay,335831365,43.670687,-79.3859398,0,Hudson's Bay,
+1,The Boulevard Club,1000000043804163,43.6355591,-79.4442304,5,The Boulevard Club,
+61,The Grange,1000000242550201,43.6531229,-79.3924964,6,The Grange,en:The Grange
+4,The Power Plant,1593379560,43.6381551,-79.3819675,41,The Power Plant Contemporary Art Gallery,en:The Power Plant
+1,The Rosedale Diner,1123683713,43.680359,-79.391132,6,The Rosedale Diner,
+2,The Toronto Hunt Club,1000000082574953,43.6822045,-79.2736139,3,The Toronto Hunt Club,
+2,The Weld Building,1000000102596800,43.6473886,-79.3938971,5,The Weld Building,
+1,Thistletown Collegiate Institute,1000000031145834,43.7279798,-79.5628337,61,Thistletown Collegiate Institute,en:Thistletown Collegiate Institute
+4,Thornhill Public School,1000000185565019,43.8109604,-79.4245531,60,Thornhill Public School,
+3,Timothy Eaton Memorial Church,1000000043807840,43.6863428,-79.4056085,61,Timothy Eaton Memorial Church,en:Timothy Eaton Memorial Church
+8,Tip Top Tailors,1000000203841581,43.6495988,-79.3896158,5,Tip Top Tailors,
+3,Todmorden Mills,277120871,43.6861518,-79.3602541,41,Todmorden Mills,en:Todmorden Mills
+7,Toronto City Hall,1000000198500761,43.6535702,-79.3839426,61,Toronto City Hall,en:Toronto City Hall
+7,Toronto Dominion Bank,3595344907,43.7916369,-79.4445218,6,Toronto Dominion Bank,
+2,Toronto Eaton Centre,400926979,43.6541053,-79.3802815,6,Toronto Eaton Centre,
+28,Toronto General Hospital,1000000031825723,43.6586108,-79.3881449,7,Toronto General Hospital,en:Toronto General Hospital
+82,Toronto Harbour,555446485,43.6316478,-79.3717802,0,Toronto Harbour,
+23,Toronto Humane Society,615965404,43.65763,-79.3563427,0,Toronto Humane Society,
+5,Toronto Hydro Electric System,1000000134951514,43.6986134,-79.3870337,5,Toronto Hydro Electric System,
+218,Toronto Island,555446522,43.6266572,-79.3946772,10,Toronto Island,
+8,Toronto Islands,555446505,43.6161962,-79.3693582,10,Toronto Islands,
+3,Toronto Western Hospital,1000000043805626,43.6534739,-79.4054879,7,Toronto Western Hospital,en:Toronto Western Hospital
+3,Traders Bank,1000000137923159,43.6487471,-79.3773911,5,Traders Bank,
+1,Trinity Anglican Church,1000000076346127,43.5527881,-79.5874964,60,Trinity Anglican Church,
+2,Trinity Bellwoods Park,1000000005941201,43.6477387,-79.4148293,31,Trinity Bellwoods Park,en:Trinity Bellwoods Park
+42,Trinity College,2000000000002687,43.6653084,-79.3957226,6,Trinity College,"en:Trinity College, Toronto"
+137,Trinity Square,1000000025823747,43.6541774,-79.3818842,31,Trinity Park and Labyrinth,en:Trinity Square
+1,True Davidson Acres,1000000045602800,43.6958158,-79.298105,6,True Davidson Acres,
+1,Turning Basin,555446684,43.6521786,-79.3325314,0,Turning Basin,
+1,US Consulate,1000000058466567,43.6527911,-79.3880625,5,Consulate General of the United States of America,
+511,Union Station,1000000014744491,43.6446907,-79.380348,6,Union Station,en:Union Station (Toronto)
+1,Union Station Loop,1000000004663352,43.6453728,-79.3789424,0,Union Station Loop,
+25,University Avenue Armouries,2485283862,43.6523632,-79.3867798,4,University Avenue Armouries,
+74,University College,1000000008032167,43.6628381,-79.3958562,6,University College,"en:University College, Toronto"
+66,Upper Canada College,1000000011044001,43.6928873,-79.4038683,61,Upper Canada College,en:Upper Canada College
+1,Vanier College,1000000096021027,43.7755176,-79.502242,5,Vanier College,
+1,Variety Store,439496097,43.6623853,-79.3511507,0,Variety Store,
+26,Variety Village,1000000068506379,43.6988217,-79.2570481,5,Variety Village,
+26,Varsity Arena,1000000008095834,43.6670155,-79.3961168,6,Varsity Arena,en:Varsity Arena
+82,Varsity Stadium,1000000006147259,43.6670288,-79.3971033,31,Varsity Centre,en:Varsity Stadium
+1,Vermont Square,1000000241163485,43.6683137,-79.4127933,5,Vermont Square,
+25,Victoria College,1000000204323029,43.6669262,-79.3919558,6,Victoria College,"en:Victoria University, Toronto"
+22,Victoria Memorial Square,1000000024039517,43.6426711,-79.4002854,30,Victoria Memorial Square,
+70,Victoria Park,1000000331946173,43.7058378,-79.6969214,30,Victoria Park,
+3,Wallberg Building,1000000012873641,43.6591443,-79.3952324,5,Wallberg Building,
+8,Wanless Park,1000000025519266,43.7288011,-79.3920365,30,Wanless Park,
+5,War Memorial,5008366495,43.67441,-79.3114282,0,War Memorial,
+3,West Island,555446430,43.6281947,-79.4207818,10,West Island,
+2,West Pond,1000000174244887,43.6403149,-79.4697158,0,West Pond,
+19,Western Gap,555446511,43.6320756,-79.3988703,0,Western Gap,
+2,Western Hospital,1000000043805626,43.6534739,-79.4054879,7,Toronto Western Hospital,en:Toronto Western Hospital
+5,Western Union,640908124,43.5788616,-79.6176543,6,Western Union,
+4,Westin Harbour Castle,1000000043809886,43.6410511,-79.3762101,41,Westin Harbour Castle,en:Westin Harbour Castle Hotel
+1,Weston Collegiate Institute,1000000032946197,43.7034927,-79.5108297,61,Weston Collegiate Institute,en:Weston Collegiate Institute
+3,Weston Station,4414956900,43.7006461,-79.5173916,6,Weston Station,
+5,Whitney Block,2000000002582659,43.6630999,-79.3897335,6,Whitney Block,en:Whitney Block
+1,Whitney Hall,1000000012874392,43.6638039,-79.3977761,5,Whitney Hall,
+1,Wigwamen Terrace,1000000058558544,43.6677551,-79.4049144,5,Wigwamen Terrace,
+2,Willowdale Park,1000000018963861,43.7660717,-79.4077114,30,Willowdale Park,
+1,Winchester Public School,1000000041740596,43.9612595,-78.9504855,60,Winchester Public School,
+1,Windsor Arms Hotel,306297437,43.6687096,-79.3909185,40,Windsor Arms Hotel,
+19,Withrow Park,1000000019881767,43.6742972,-79.3469274,31,Withrow Park,en:Withrow Park
+1,Wolseley Loop,1000000009457366,43.6480364,-79.4041487,0,Wolseley Loop,
+34,Wonder Mountain,1000000037535084,43.842328,-79.5422435,5,Wonder Mountain,
+23,Woodbine Beach,1000000023297112,43.6617403,-79.3068362,0,Woodbine Beach,
+2,Woodbine Heights Baptist Church,1000000072652019,43.6913763,-79.3148035,60,Woodbine Heights Baptist Church,
+1,Woodbine Mini Mart,269539180,43.6942698,-79.3162393,0,Woodbine Mini Mart,
+39,Woodbine Racetrack,1000000032157260,43.715158,-79.6041288,6,Woodbine Racetrack,en:Woodbine Racetrack
+1,Woodmount Variety,518304250,43.6907366,-79.317375,0,Woodmount Variety,
+5,Wycliffe College,2000000000047346,43.6645153,-79.3949699,5,Wycliffe College,
+17,York Club,1000000023201569,43.6680087,-79.3994592,7,The York Club,en:York Club
+1,York Masonic Temple,1000000028615531,43.7024554,-79.3535578,5,York Masonic Temple,
+1,York Memorial Collegiate Institute,1000000032596010,43.6910391,-79.4769903,61,York Memorial Collegiate Institute,en:York Memorial Collegiate Institute
+2,York Quay Centre,1000000146040703,43.6387487,-79.3827635,5,York Quay Centre,
+2,York School,1000000060170481,43.6917428,-79.3948217,61,The York School,en:York School
+16,York University,1000000015396822,43.7742344,-79.504888,61,"York University, Keele Campus",en:York University
+4,Yorkdale Shopping Centre,1000000019887459,43.7255751,-79.4521436,6,Yorkdale Shopping Centre,en:Yorkdale Shopping Centre

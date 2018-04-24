@@ -1,15 +1,8 @@
 # Toronto Archives Data Collection
 
-See DanVK's [notes][2]. The Toronto Archives' web site has 100,000+ digitized photos
-but also has a number of issues which make it challenging for us to use:
-
-  * Most URLs include a temporary session ID which expires after an hour.
-    This means you can't copy/paste links to anything.
-  * It's not immediately clear whether image records have a unique ID.
-
-As it turns out, their mobile site has a few more features, e.g. permalinks.
-To collect data on all the digitized photos, we use an empty search on their
-mobile web site and iterate through the paginated results.
+The Toronto Archives' web site has 100,000+ digitized photos. To collect data on all
+the digitized photos, we use an empty search on their mobile web site and iterate
+through the paginated results.
 
 Here's the procedure:
 
@@ -56,3 +49,7 @@ To download and attach this data, run:
 
 The `series.ndjson` file now contains a record for each level of the hierarchy that contains a
 digitized image.
+
+[m]: https://gencat.eloquent-systems.com/city-of-toronto-archives-m-public.html
+[image]: https://gencat.eloquent-systems.com/city-of-toronto-archives-m-permalink.html?key=571480
+[file]: https://gencat.eloquent-systems.com/city-of-toronto-archives-m-permalink.html?key=348714

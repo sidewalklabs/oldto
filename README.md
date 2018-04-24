@@ -20,34 +20,42 @@ for popular locations like the CN Tower or City Hall.
 
 ## Development setup
 
-Setup dependencies:
+Setup dependencies (on a Mac):
 
     brew install coreutils csvkit
+
+OldTO requires Python 3.6. Once you have this set up, you can install the
+Python dependencies (possibly in a virtual environment) via:
+
     pip install -r requirements.txt
 
-## Building an OldNYC-style site
+## Building the site
 
-The OldTO site lives in `oldto-site`. In order to build it, set
-the enviroment variable `GMAPS_API_KEY` to your own api key:
+The OldTO site lives in `oldto-site`. In order to build it, you'll need the
+yarn package manager. Instructions on setting that up at https://yarnpkg.com/.
+
+You'll also need to get a [Google Maps API key][api key]. Once you've done this,
+set the enviroment variable `GMAPS_API_KEY` to your own api key:
 
     export GMAPS_API_KEY=...
 
-See [instructions here][api key] for getting an API key.
-
-Webpack needs this to build the site when you run 'yarn webpack'. You can
+Webpack needs this to build the site when you run `yarn webpack`. You can
 spin it up by running it locally using `http-server` (install with
 `npm install -g http-server`).
 
     cd oldto-site
-    yarn
-    yarn webpack
-    cd ../oldto-site/dist
+    yarn          # install dependencies
+    yarn webpack  # bundle JavaScript and build site
+    cd dist
     http-server --proxy=https://api.sidewalklabs.com
 
-To iterate on the JavaScript, run:
+The visit http://localhost:8081/ to browse the site.
 
+To iterate on the site, use `yarn watch`:
+
+    cd oldto-site
     yarn watch &
-    cd oldto-site/dist
+    cd dist
     http-server --proxy=https://api.sidewalklabs.com
 
 ## Generating new geocodes

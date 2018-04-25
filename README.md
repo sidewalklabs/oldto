@@ -47,9 +47,9 @@ spin it up by running it locally using `http-server` (install with
     yarn          # install dependencies
     yarn webpack  # bundle JavaScript and build site
     cd dist
-    http-server --proxy=https://api.sidewalklabs.com
+    http-server --proxy=https://api.sidewalklabs.com -p 8081
 
-The visit http://localhost:8081/ to browse the site.
+Then visit http://localhost:8081/ to browse the site.
 
 To iterate on the site, use `yarn watch`:
 

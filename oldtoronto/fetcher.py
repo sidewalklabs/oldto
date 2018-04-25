@@ -22,12 +22,18 @@ import fileinput
 import hashlib
 import io
 import json
+import logging
 import os
 import sys
 import time
 import urllib
 
+from logging_configuration import configure_logging
+
 import requests
+
+
+LOG = logging.getLogger(__name__)
 
 
 class NotInCacheError(Exception):
@@ -53,9 +59,11 @@ class CacheSession(requests.Session):
         assert request.method == 'GET'
         resp = None
         if self._cache.is_url_in_cache(url):
+            LOG.debug(f'cache hit for url: {url}')
             resp = Response()
             resp.contents = self._cache.fetch_url_from_cache(url)
         else:
+            LOG.debug(f'cache miss for url: {url}')
             resp = super(CacheSession, self).send(request, **kwargs)
             self._cache.store_url_in_cache(url, resp.content)
         return resp
@@ -73,11 +81,24 @@ class Cache(object):
         """Returns path to the cached version of an URL, regardless of whether it exists."""
         parsed_url = urllib.parse.urlparse(url)
         dir_path = os.path.join(self._cache_dir, parsed_url.netloc)
-        return os.path.join(dir_path, self._hash(url))
+        query_minus_api_key = urllib.parse.urlencode(
+            self._remove_api_key_query_param(parsed_url.query))
+        url_transformed = urllib.parse.urlunparse((
+            parsed_url.scheme,
+            parsed_url.netloc,
+            parsed_url.path,
+            parsed_url.params,
+            query_minus_api_key,
+            parsed_url.fragment))
+        return os.path.join(dir_path, self._hash(url_transformed))
 
     def _hash(self, url):
         """Compute SHA1 checksum for the URL."""
         return hashlib.sha1(url.encode('utf8')).hexdigest()
+
+    def _remove_api_key_query_param(self, qp):
+        parsed = urllib.parse.parse_qsl(qp)
+        return [(k, v) for k, v in parsed if k != 'key']
 
     def fetch_url_from_cache(self, url):
         path = self._cache_path(url)
@@ -143,6 +164,7 @@ class Fetcher(object):
 
 
 if __name__ == '__main__':
+    configure_logging()
     f = Fetcher()
     for i, line in enumerate(fileinput.input()):
         line = line.strip()

@@ -10,7 +10,7 @@ OldTO begins with data from the [Toronto Archives][1], which you can find
 in [`data/images.ndjson`](/data/images.ndjson).
 
 To place the images on a map ("geocode" them), we use a [list of Toronto
-street names](/data/streets.txt) and a collection of [regular expressions][]
+street names](/data/streets.txt) and a collection of regular expressions
 which look for addresses and cross-streets. We send these through the
 [Google Maps Geocoding API][API] to get latitudes and longitudes for the
 images. We also incorporate a [set of points of interest](/data/toronto-pois.osm.csv)

@@ -10,7 +10,7 @@ const LABEL_LAYERS = [
   'bridge_major',
   'bridge_minor'
 ]
-const YEARS = [1947, 1983, 1985, 1987, 1989, 1991, 1992, 'Now'];
+const YEARS = [1947, 1983, 1985, 1987, 1989, 1991, 1992, 2018];
 
 let currentLayer = YEARS[0];
 

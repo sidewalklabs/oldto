@@ -1,6 +1,6 @@
 /* global mapboxgl */
 
-const BASE_STYLE = 'mapbox://styles/rvilim/cjg87z8j1068k2sp653i9xpbm';
+const BASE_STYLE = 'mapbox://styles/rvilim/cjg87z8j1068k2sp653i9xpbm?fresh=true';
 
 // TODO(danvk): show minor roads depending on zoom level, building names.
 const LABEL_LAYERS = [
@@ -10,7 +10,7 @@ const LABEL_LAYERS = [
   'bridge_major',
   'bridge_minor'
 ]
-const YEARS = [1983, 1985, 1987, 1989, 1991, 1992];
+const YEARS = [1947, 1983, 1985, 1987, 1989, 1991, 1992, 'Now'];
 
 let currentLayer = YEARS[0];
 

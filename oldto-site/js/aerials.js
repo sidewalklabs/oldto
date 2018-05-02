@@ -11,7 +11,7 @@ const LABEL_LAYERS = [
   'bridge_minor'
 ]
 const YEARS = [1947, 1983, 1985, 1987, 1989, 1991, 1992, 2018];
-
+const SATELLITE_LAYER='Satellite';
 let currentLayer = YEARS[0];
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicnZpbGltIiwiYSI6ImNqZ2Nic2R5czNncWwyd241djdwODIyOGgifQ.YwmNuS4UDs0Q27LBHvLg7w';
@@ -108,9 +108,20 @@ function setLabelVisibility() {
     map.setLayoutProperty(label, 'visibility', visibility);
   }
 }
+
+let satelliteVisible = false;
+function setSatelliteVisibility() {
+  const visibility = satelliteVisible ? 'visible' : 'none';
+  map.setLayoutProperty(SATELLITE_LAYER, 'visibility', visibility);
+}
+
 $('#show-labels').on('change', function() {
   labelsVisible = $(this).is(':checked');
   setLabelVisibility();
+});
+$('#show-satellite').on('change', function() {
+  satelliteVisible = $(this).is(':checked');
+  setSatelliteVisibility();
 });
 
 $('#location-search').on('keypress', function(e) {

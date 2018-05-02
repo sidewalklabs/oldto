@@ -3,6 +3,9 @@
 .pydevproject
 .settings/
 
+#Jetbrains
+.idea*
+
 #Ignore Python Build Files
 *.pyc
 

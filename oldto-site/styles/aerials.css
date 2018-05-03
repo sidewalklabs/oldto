@@ -95,3 +95,17 @@ a#play-pause {
   margin-right: 15px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 736px) {
+  .left-nav {
+    display: block;
+  }
+
+  #search, .feedback-about, .mdl-card__title, hr, .satellite-control {
+    display: none;
+  }
+
+  .mdl-card {
+    min-height: 0;
+  }
+}

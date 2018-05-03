@@ -4,7 +4,7 @@ image_geocodes := data/geocode_results.json
 parent_mined_data := data/parent_mined_data.json
 series_geocodes := data/parent.geocode_results.json
 streets := data/streets.txt
-
+override_sheet := data/Old\ Toronto\ Responses\ -\ Override\ Sheet.csv
 
 all: $(geojson).md5
 
@@ -23,7 +23,7 @@ diff-sample:
 	oldtoronto/generate_geojson.py --sample 0.05 /tmp/geocode_results.new.5pct
 
 # mining data from parents has outstanding issues. Use a stale version of the file until resolving AP-237
-$(geojson): oldtoronto/generate_geojson.py.md5 $(image_geocodes).md5
+$(geojson): oldtoronto/generate_geojson.py.md5 $(image_geocodes).md5 $(override_sheet).md5
 	oldtoronto/generate_geojson.py --parent_data $(parent_mined_data) \
 	--geocode_results $(image_geocodes) --patch_csv "data/Old Toronto Responses - Override Sheet.csv" --output $@
 
@@ -52,7 +52,7 @@ deps: requirements.txt
 .PHONY: update
 update:
 	find oldtoronto/ -maxdepth 1 ! -name '*.md5' | xargs touch
-	find data/ ! -name '*.md5' ! -name 'toronto-pois.osm.csv' ! -name 'images.ndjson' ! -name 'series.ndjson' ! -name 'truth.gtjson'  | xargs touch
+	find data/ ! -name '*.md5' ! -name 'toronto-pois.osm.csv' ! -name 'images.ndjson' ! -name 'series.ndjson' ! -name 'truth.gtjson' ! -name 'Old Toronto Responses - Override Sheet.csv' | xargs touch
 
 clean:
 	rm data/*.md5

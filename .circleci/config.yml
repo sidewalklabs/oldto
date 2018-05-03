@@ -141,13 +141,13 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: AP-176-TrinityCollege
       - deploy-staging:
           requires:
             - publish-docker
           filters:
             branches:
-              only: master
+              only: AP-176-TrinityCollege
       - hold:
           type: approval
           requires:

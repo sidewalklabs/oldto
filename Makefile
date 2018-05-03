@@ -24,7 +24,8 @@ diff-sample:
 
 # mining data from parents has outstanding issues. Use a stale version of the file until resolving AP-237
 $(geojson): oldtoronto/generate_geojson.py.md5 $(image_geocodes).md5
-	oldtoronto/generate_geojson.py --parent_data $(parent_mined_data) --geocode_results $(image_geocodes) --output $@
+	oldtoronto/generate_geojson.py --parent_data $(parent_mined_data) \
+	--geocode_results $(image_geocodes) --patch_csv "data/Old Toronto Responses - Override Sheet.csv" --output $@
 
 $(parent_mined_data):  oldtoronto/geocode.py.md5 oldtoronto/mine_parents_for_data.py data/series.ndjson.md5 $(image_geocodes).md5
 	python oldtoronto/geocode.py --input data/series.ndjson --output $(series_geocodes) --strict true

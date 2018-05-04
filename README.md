@@ -18,7 +18,27 @@ for popular locations like the CN Tower or City Hall.
 
 * Live site: https://oldtoronto.sidewalklabs.com
 
-## Development setup
+## :computer: Local Development
+
+If you're willing to install docker, it is usually the simplest way to
+get up and running.
+
+### Docker
+
+**Docker** is a tool that helps isolate your development environment.
+
+**Requirements:**
+- Docker (tested on v17.10.0)
+- Docker Compose (tested in v1.16.1)
+
+```
+$ cd path/to/oldto
+$ docker-compose up
+```
+
+You may now view the webapp at: [`localhost:5000`][http://localhost:5000]
+
+### Manually
 
 Setup dependencies (on a Mac):
 

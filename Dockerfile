@@ -1,4 +1,4 @@
-FROM node:9.8.0 as builder
+FROM node:9.8.0-alpine as builder
 ARG GMAPS_API_KEY
 
 WORKDIR oldto-site

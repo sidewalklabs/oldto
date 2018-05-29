@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: swl-oldtoronto-web
+        contacts: danvk_dosinga
     spec:
       containers:
       - image: us.gcr.io/nyc-tlc-1225/swl-oldtoronto-web

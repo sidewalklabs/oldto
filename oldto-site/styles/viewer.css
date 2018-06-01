@@ -494,7 +494,6 @@ div#time-slider {
   margin-left: 8px;
 }
 
-
 .details .label {
   font-family: Montserrat;
   font-weight: 600;
@@ -514,6 +513,10 @@ div#time-slider {
   font-weight: 600;
   font-size: 18px;
   margin: 20px auto;
+}
+
+.details .value.subject {
+  white-space: pre-line;
 }
 
 .popup:hover {

@@ -332,24 +332,38 @@ function isMobileView() {
   return !$('.left-nav').is(':visible');
 }
 
+// See get_source_properties in generate_geojson.py
+const ALL_FIELDS = [
+  'date',  // Both
+  'physical_desc', 'citation', 'condition', 'scope',  // Toronto Archives
+  'creator', 'description', 'subject' // TPL
+];
+
 // This fills out details for either a thumbnail or the expanded image pane.
 function fillPhotoPane(photoId, $pane) {
   // $pane is div.og-details
 
   const info = infoForPhotoId(photoId);
-  const {archives_fields, geocode, url} = info;
+  const {archives_fields, geocode, url, tpl_fields} = info;
+  const source = tpl_fields ? 'tpl' : 'toronto-archives';
 
-  $pane.find('a.link').attr('href', url);
+  $pane.find('a.link')
+    .attr('href', url)
+    .text(source === 'tpl' ? 'Toronto Public Library' : 'City of Toronto Archives');
   $pane.find('a.feedback-button').attr('href', `/corrections/?id=${photoId}`);
 
-  _.forEach(archives_fields, (v, k) => {
+  const fields = archives_fields || tpl_fields;
+
+  for (const k of ALL_FIELDS) {
+    const v = fields[k];
     if (v) {
       $pane.find(`.${k}`).show();
       $pane.find(`.value.${k}, a.${k}`).text(v || '');
     } else {
       $pane.find(`.${k}`).hide();  // hide both key & value if value is missing.
     }
-  });
+  }
+
   $pane.find('.title').text(info.title);
   $pane.find('.geocode-debug').text(JSON.stringify(geocode, null, 2));
   $pane.find('.inline-image').attr({

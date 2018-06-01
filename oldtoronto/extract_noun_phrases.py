@@ -113,7 +113,7 @@ if __name__ == '__main__':
     parser.add_argument('--noun_type', type=str,
                         help='pois|streets,  what type of noun to extract')
     parser.add_argument('--cutoff', type=int, default=1)
-    parser.add_argument('--input', type=str, default='data/images.ndjson',
+    parser.add_argument('--input', type=str, default='data/toronto-archives/images.ndjson',
                         help='path to images.ndjson file to extract from')
 
     args = parser.parse_args()

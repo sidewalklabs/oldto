@@ -17,6 +17,7 @@ import pandas as pd
 from date_distribution import parse_year
 from toronto_archives import SHORT_URL_PATTERN
 from utils.generators import read_ndjson_file
+from utils.deep_update import deep_update
 
 
 def load_image_sizes(sizes_file):
@@ -34,11 +35,15 @@ def load_image_sizes(sizes_file):
     return path_to_dimensions
 
 
+def url_to_filename(url):
+    return os.path.splitext(os.path.basename(image_url))[0]
+
+
 def get_thumbnail_url(image_url):
     base_url = 'https://storage.googleapis.com/sidewalk-old-toronto/thumbnails/'
     ext = 'jpg'
 
-    filename = os.path.splitext(os.path.basename(image_url))[0]
+    filename = url_to_filename(image_url)
     return os.path.join(base_url, '{}.{}'.format(filename, ext))
 
 
@@ -46,7 +51,7 @@ def get_mirror_url(image_url):
     base_url = 'https://storage.googleapis.com/sidewalk-old-toronto/images/'
     ext = 'jpg'
 
-    filename = os.path.splitext(os.path.basename(image_url))[0]
+    filename = url_to_filename(image_url)
     return os.path.join(base_url, '{}.{}'.format(filename, ext))
 
 
@@ -80,11 +85,59 @@ def load_patch_csv(patch_csv):
     return {str(key): photo_id_to_lat_lng.get(key) for key in all_keys if key not in fixed}
 
 
+ARCHIVES_FIELDS = ('date', 'physical_desc', 'citation', 'condition', 'scope')
+TPL_FIELDS = ('date', 'creator', 'description', 'subject')
+
+
+def get_source_properties(source, record):
+    """Return properties which are specific to a source, e.g. URLs."""
+    id_ = record.get('uniqueID')
+    image_url = record.get('imageLink')
+
+    if source == SOURCE_ARCHIVES:
+        return {
+            'url': SHORT_URL_PATTERN % id_,
+            'image': {
+                'url': get_mirror_url(image_url),
+                'thumb_url': get_thumbnail_url(image_url)
+            },
+            'archives_fields': {
+                k: record.get(k)
+                for k in ARCHIVES_FIELDS
+            }
+        }
+
+    elif source == SOURCE_TPL:
+        return {
+            'url': record['url'],
+            # SC =  122 x 160
+            # MC =  536 x 700
+            # LC = 1472 x 1920
+            'image': {
+                'url': image_url.replace('/MC/', '/LC/'),
+                'thumb_url': image_url.replace('/MC/', '/SC/')
+            },
+            'tpl_fields': {
+                k: record.get(k)
+                for k in TPL_FIELDS
+            }
+        }
+
+    else:
+        raise ValueError(f'Invalid source {source}')
+
+
+SOURCE_TPL = 'tpl'
+SOURCE_ARCHIVES = 'toronto-archives'
+SOURCES = {SOURCE_TPL, SOURCE_ARCHIVES}
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Collect data on all the images into a GeoTempoJSON file.')
+    parser.add_argument('--input', type=str,
+                        help='Path to ndjson file containing all image records.')
     parser.add_argument('--parent_data', type=str,
                         help='mapping uniqueID to metadata scraped from parent series/fonds/etc',
-                        default='data/parent_mined_data.json')
+                        default='')
     parser.add_argument('--geocode_results', type=str,
                         help='json results from geocoding files',
                         default='data/geocode_results.json')
@@ -98,9 +151,17 @@ if __name__ == '__main__':
                         help='path to a csv to override lat/lngs. Can be local or remote. '
                              'rows with missing lat/lngs will be skipped in the output.',
                         default='data/Old Toronto Responses - Override Sheet.csv')
+    parser.add_argument('--drop_unlocated', action='store_true',
+                        help='Omit records without a location, rather than giving them '
+                             'a null geometry. This reduces file size on disk.')
+    parser.add_argument('--source', type=str, default='toronto-archives',
+                        help='Set this to either "toronto-archives" or "tpl". This affects how '
+                             'metadata is attached to the image records.')
     args = parser.parse_args()
 
-    parent_data = json.load(open(args.parent_data))
+    assert args.source in SOURCES
+
+    parent_data = json.load(open(args.parent_data)) if args.parent_data else {}
     id_to_geocode = json.load(open(args.geocode_results))
     path_to_size = load_image_sizes(args.path_to_size)
 
@@ -117,7 +178,7 @@ if __name__ == '__main__':
     patch_csv = load_patch_csv(args.patch_csv)
 
     features = []
-    for record in read_ndjson_file('data/images.ndjson'):
+    for record in read_ndjson_file(args.input):
         num_total += 1
 
         id_ = record.get('uniqueID')
@@ -155,7 +216,7 @@ if __name__ == '__main__':
 
         image_url = record.get('imageLink')
         assert image_url
-        dims = path_to_size.get(os.path.basename(image_url))
+        dims = path_to_size.get(os.path.basename(image_url)) or path_to_size.get(id_ + '.jpg')
 
         # If dims is none it means that ImageMagick was not able to parse the image so it doesn't
         # appear in our image dimension list. This could be because the image was corrupt, or did
@@ -164,6 +225,20 @@ if __name__ == '__main__':
             num_invalid += 1
             continue
 
+        if args.drop_unlocated and not geocode:
+            continue
+
+        properties = {
+            'title': record.get('title'),
+            'date': str(year) if year else None,
+            'geocode': geocode,
+            'image': {
+                'width': dims[0],
+                'height': dims[1],
+            },
+        }
+        deep_update(properties, get_source_properties(args.source, record))
+
         features.append({
             'id': id_,
             'type': 'Feature',
@@ -171,22 +246,7 @@ if __name__ == '__main__':
                 'type': 'Point',
                 'coordinates': [geocode['lng'], geocode['lat']],
             } if geocode else None,
-            'properties': {
-                'title': record.get('title'),
-                'date': str(year) if year else None,
-                'url': SHORT_URL_PATTERN % id_,
-                'geocode': geocode,
-                'image': {
-                    'url': get_mirror_url(image_url),
-                    'width': dims[0],
-                    'height': dims[1],
-                    'thumb_url': get_thumbnail_url(image_url)
-                },
-                'archives_fields': {
-                    k: record.get(k)
-                    for k in ('date', 'physical_desc', 'citation', 'condition', 'scope')
-                }
-            }
+            'properties': properties
         })
 
     print('   Total records: %s' % num_total)

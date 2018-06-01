@@ -15,6 +15,7 @@ dist/
 cache
 *.sqlite
 *.ipynb
+.venv
 
 .vscode
 *.log*

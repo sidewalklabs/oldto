@@ -19,6 +19,15 @@ from toronto_archives import SHORT_URL_PATTERN
 from utils.generators import read_ndjson_file
 from utils.deep_update import deep_update
 
+# Possible sources of imagery.
+SOURCE_TPL = 'tpl'
+SOURCE_ARCHIVES = 'toronto-archives'
+SOURCES = {SOURCE_TPL, SOURCE_ARCHIVES}
+
+# Fields to copy into GeoJSON for each data source.
+ARCHIVES_FIELDS = ('date', 'physical_desc', 'citation', 'condition', 'scope')
+TPL_FIELDS = ('date', 'creator', 'description', 'subject')
+
 
 def load_image_sizes(sizes_file):
     """Load image sizes into a path --> [width, height] dict."""
@@ -85,10 +94,6 @@ def load_patch_csv(patch_csv):
     return {str(key): photo_id_to_lat_lng.get(key) for key in all_keys if key not in fixed}
 
 
-ARCHIVES_FIELDS = ('date', 'physical_desc', 'citation', 'condition', 'scope')
-TPL_FIELDS = ('date', 'creator', 'description', 'subject')
-
-
 def get_source_properties(source, record):
     """Return properties which are specific to a source, e.g. URLs."""
     id_ = record.get('uniqueID')
@@ -126,10 +131,6 @@ def get_source_properties(source, record):
     else:
         raise ValueError(f'Invalid source {source}')
 
-
-SOURCE_TPL = 'tpl'
-SOURCE_ARCHIVES = 'toronto-archives'
-SOURCES = {SOURCE_TPL, SOURCE_ARCHIVES}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Collect data on all the images into a GeoTempoJSON file.')
@@ -216,7 +217,7 @@ if __name__ == '__main__':
 
         image_url = record.get('imageLink')
         assert image_url
-        dims = path_to_size.get(os.path.basename(image_url)) or path_to_size.get(id_ + '.jpg')
+        dims = path_to_size.get(os.path.basename(image_url), path_to_size.get(id_ + '.jpg'))
 
         # If dims is none it means that ImageMagick was not able to parse the image so it doesn't
         # appear in our image dimension list. This could be because the image was corrupt, or did

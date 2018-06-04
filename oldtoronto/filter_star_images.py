@@ -15,6 +15,8 @@ import sys
 
 
 def is_star_image(record):
+    # There are a few ways to identify Toronto Star images.
+    # The 'provenance' and 'rights_holders' fields are sometimes set to None.
     return (
         'TSPA' in record['license'] or
         '-TS-' in record['uniqueID'] or

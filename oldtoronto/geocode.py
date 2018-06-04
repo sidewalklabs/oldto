@@ -18,6 +18,7 @@ from logging_configuration import configure_logging
 from settings import GMAPS_API_KEY
 from utils import generators
 from utils.id_sample import should_sample
+from utils.timeout import timeout
 
 googlemaps.client.requests.Session = googlemaps.client.requests.sessions.Session = CacheSession
 
@@ -421,11 +422,16 @@ def main(input_file, street_names_file, pois_file, output_file, sampling_rate, i
             LOG.debug(f'Skipping {id_} due to sampling rate')
             continue
 
-        geocode_result = row_to_result(parsers, maps_client, row, strict=strict)
-        if geocode_result is not None:
-            uid, result = geocode_result
-            results[uid] = result
-        LOG.debug(f'{id_}: {geocode_result}')
+        try:
+            with timeout(seconds=30):
+                geocode_result = row_to_result(parsers, maps_client, row, strict=strict)
+                if geocode_result is not None:
+                    uid, result = geocode_result
+                    results[uid] = result
+                LOG.debug(f'{id_}: {geocode_result}')
+        except TimeoutError:
+            LOG.warn(f'Timed out geocoding {id_}: {get_title(row)}')
+            pass
     write_result_to_file(output_file, results)
 
 

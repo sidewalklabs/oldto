@@ -69,7 +69,7 @@ pipeline run faster and more consistently than geocoding from scratch.
 With this in place, you can update `images.geojson` by running:
 
     make
-    
+
 Note, to run the makefile on an OSX machine you will probably want to install md5sum, which can be done by running:
 
     brew update && brew install md5sha1sum

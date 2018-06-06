@@ -1,3 +1,5 @@
+import {fillDetailsPanel} from '../js/fill-details';
+
 function getCookie(name) {
   const b = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
   return b ? b.pop() : '';
@@ -134,22 +136,7 @@ function initMap() {
     const {image} = properties;
 
     const $pane = $('.inputside');
-    const {archives_fields, geocode, url} = properties;
-    const title = properties.name;
-
-    // this code mirrors viewer.js:fillPhotoPane().
-    $pane.find('a.link').attr('href', url);
-
-    $.each(archives_fields, (k, v) => {
-      if (v) {
-        $pane.find(`.${k}`).show();
-        $pane.find(`.value.${k}, a.${k}`).text(v || '');
-      } else {
-        $pane.find(`.${k}`).hide();  // hide both key & value if value is missing.
-      }
-    });
-    $pane.find('.title').text(title);
-    $pane.find('.geocode-debug').text(JSON.stringify(geocode, null, 2));
+    fillDetailsPanel(feature.id, properties, $pane);
 
     $pane.find('a img').attr('src', image.url);
     $('#photo-id').val(feature.id);

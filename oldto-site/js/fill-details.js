@@ -9,11 +9,10 @@ const ALL_FIELDS = [
 
 export function fillDetailsPanel(photoId, info, $pane) {
   const {archives_fields, geocode, url, tpl_fields} = info;
-  const source = tpl_fields ? 'tpl' : 'toronto-archives';
 
   $pane.find('a.link').attr('href', url);
   $pane.find('a.link.source')
-    .text(source === 'tpl' ? 'Toronto Public Library' : 'City of Toronto Archives');
+    .text(tpl_fields ? 'Toronto Public Library' : 'City of Toronto Archives');
   $pane.find('a.feedback-button').attr('href', `/corrections/?id=${photoId}`);
 
   const fields = archives_fields || tpl_fields;

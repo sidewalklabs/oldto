@@ -24,7 +24,7 @@ features = []
 
 
 def old_toronto_key(lat, lng):
-    """"Return a key for a record that matches the old toronto convention of the
+    """Return a key for a record that matches the old toronto convention of the
     concatenation of the lat and lng rounded to 6 decimals.
     Rounding is done differently in JavaScript from Python - 3.499999 rounds to
     3.4 in Python, 3.5 in JavaScript, hence the workaround to first round to 7
@@ -37,6 +37,16 @@ def old_toronto_key(lat, lng):
     lng = round6(lng)
 
     return f'{lat:2.6f},{lng:2.6f}'
+
+
+def record_source(record):
+    """Returns either "cta" or "tpl" depending on the record source."""
+    props = record['properties']
+    if 'archives_fields' in props:
+        return 'cta'
+    elif 'tpl_fields' in props:
+        return 'tpl'
+    raise ValueError('Unable to get source for %s' % record['id'])
 
 
 app = Flask(__name__)
@@ -60,8 +70,11 @@ def maybe_load_features():
 
 @app.route('/api/oldtoronto/lat_lng_counts')
 def lat_lng_counts():
+    source = request.args.get('source')
     counts = defaultdict(Counter)
     for f in features:
+        if source and source != record_source(f):
+            continue
         lng, lat = f['geometry']['coordinates']
         year = f['properties']['date'] or ''
         counts[old_toronto_key(lat, lng)][year] += 1
@@ -79,11 +92,13 @@ def by_location():
         image['image_url'] = image.pop('url')
         return dict(image, id=poi['id'], **props)
 
+    source = request.args.get('source')
     pt = (float(request.args.get('lat')), float(request.args.get('lng')))
     results = {
         f['id']: poi_to_rec(f)
         for f in features
         if haversine(pt, f['geometry']['coordinates'][::-1]) < 0.005
+        and (not source or source == record_source(f))
     }
     return jsonify(results)
 

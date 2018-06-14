@@ -12,6 +12,14 @@ const latLonToName = {};
 const SITE = '';
 const BY_LOCATION_API = '/api/oldtoronto/by_location';
 
+// e.g. "tpl", "cta" or undefined.
+const source = (() => {
+  const m = window.location.search.match(/source=([a-zA-Z]+)/);
+  if (m) {
+    return m[1];
+  }
+})();
+
 // The callback is called with the photo_ids that were just loaded, after the
 // UI updates.  The callback may assume that infoForPhotoId() will return data
 // for all the newly-available photo_ids.
@@ -22,6 +30,9 @@ export function loadInfoForLatLon(latLonStr) {
   } else {
     const [lat, lon] = latLonStr.split(',');
     url = `${BY_LOCATION_API}?lat=${lat}&lng=${lon}`;
+  }
+  if (source) {
+    url += `&source=${source}`;
   }
 
   return $.getJSON(url).then(function(responseData) {

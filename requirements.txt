@@ -4,7 +4,7 @@ certifi==2018.1.18
 chardet==3.0.4
 flake8==3.5.0
 flake8-quotes==0.14.0
-Flask==0.12.4
+flask==0.20.0
 googlemaps==2.5.1
 haversine==0.4.5
 idna==2.6

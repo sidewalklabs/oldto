@@ -242,6 +242,11 @@
   else if (window.location.hostname === 'oldtoronto.sidewalklabs.com') {
     window.location.hostname = 'oldto.sidewalklabs.com';
   }
+
+  var isKiosk = (window.location.search.indexOf('kiosk') >= 0);
+  if (isKiosk) {
+    document.body.className += ' kiosk';
+  }
 </script>
 
 <script>

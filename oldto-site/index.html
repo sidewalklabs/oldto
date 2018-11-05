@@ -241,6 +241,8 @@
   var isKiosk = (window.location.search.indexOf('kiosk') >= 0);
   if (isKiosk) {
     document.body.className += ' kiosk';
+    document.querySelector('.feedback-about a').setAttribute('href', '/?kiosk=1');
+    document.querySelector('a.aerials-link').setAttribute('href', '/aerials.html?kiosk=1');
   }
 </script>
 

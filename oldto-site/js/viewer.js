@@ -308,7 +308,7 @@ export function showExpanded(key, photoIds, opt_selectedId) {
   });
   images = images.filter(image => image !== null);
   $('#grid-container').expandableGrid({
-    rowHeight: 120,
+    rowHeight: 200,
     speed: 200 /* ms for transitions */
   }, images);
   if (opt_selectedId) {

@@ -96,7 +96,7 @@
 
   <div class="feedback-about">
     <a class="mdl-shadow--4dp" href="/about.html">About</a>
-    <a class="mdl-shadow--4dp" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
+    <a class="mdl-shadow--4dp hide-for-kiosk" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
   </div>
 
   <div class="legal">
@@ -105,6 +105,15 @@
     <span class="long-copyright">Copyright ©2018, Sidewalk Toronto Employees Ltd. All rights reserved.</span>
     <span class="short-copyright"><br>©2018 Sidewalk Toronto</span>
   </div>
+
+  <script>
+    var isKiosk = (window.location.search.indexOf('kiosk') >= 0);
+    if (isKiosk) {
+      document.body.className += ' kiosk';
+      document.querySelector('a.oldto-link').setAttribute('href', '/?kiosk=1');
+    }
+  </script>
+
   <script src="js/vendor/vendor-all.js"></script>
 
   <script>

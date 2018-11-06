@@ -1,5 +1,7 @@
 /* global mapboxgl */
 
+import 'mapbox-gl-compare';
+
 const BASE_STYLE = 'mapbox://styles/rvilim/cjg87z8j1068k2sp653i9xpbm?fresh=true';
 
 // TODO(danvk): show minor roads depending on zoom level, building names.
@@ -28,6 +30,18 @@ map.addControl(new mapboxgl.GeolocateControl({
     enableHighAccuracy: true
   }
 }), 'bottom-right');
+
+var map2 = new mapboxgl.Map({
+  container: 'map2',
+  style: BASE_STYLE,
+  center: [-79.3738487, 43.6486135],
+  zoom: 13
+})
+
+new mapboxgl.Compare(map, map2, {
+  // mousemove: true // Optional. Set to true to enable swiping during cursor movement.
+});
+
 let marker;
 
 map.on('load', () => {
@@ -37,7 +51,8 @@ map.on('load', () => {
   for (const year of YEARS) {
     map.setPaintProperty('' + year, 'raster-fade-duration', 0);
   }
-  showYear(currentLayer);
+  showYear(currentLayer, map);
+  showYear(YEARS[YEARS.length - 1], map2);
 });
 
 function cleanupVisibility() {
@@ -50,7 +65,7 @@ function cleanupVisibility() {
   }
 }
 
-function showYear(year) {
+function showYear(year, map) {
   const newLayer = '' + year;
   if (newLayer !== currentLayer) {
     $('#year').text(year);
@@ -66,7 +81,7 @@ function changeYear(delta) {
   const index = $('#slider').slider('value');
   const newIndex = (index + YEARS.length + delta) % YEARS.length;
   const year = YEARS[newIndex];
-  showYear(year);
+  showYear(year, map);
   $('#slider').slider('value', newIndex);
 }
 
@@ -76,7 +91,7 @@ $('#slider').slider({
   value: 0,
   slide: (event, ui) => {
     const index = ui.value;
-    showYear(YEARS[index]);
+    showYear(YEARS[index], map);
   }
 });
 

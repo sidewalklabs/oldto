@@ -98,3 +98,8 @@ span.TitleLogo2 {
     display: block;  /* one column */
   }
 }
+
+/* Kiosk mode */
+body.kiosk .hide-for-kiosk {
+  display: none;
+}

@@ -180,10 +180,13 @@ function handleClick(e, opt_latLon) {
   });
 }
 
+const INIT_CENTER = new google.maps.LatLng(43.6486135, -79.3738487)
+const INIT_ZOOM = 15;
+
 export function initializeMap() {
-  const center = new google.maps.LatLng(43.6486135, -79.3738487);
+  const center = INIT_CENTER;
   const opts = {
-    zoom: 15,
+    zoom: INIT_ZOOM,
     maxZoom: 18,
     minZoom: 10,
     center: center,
@@ -308,7 +311,7 @@ export function showExpanded(key, photoIds, opt_selectedId) {
   });
   images = images.filter(image => image !== null);
   $('#grid-container').expandableGrid({
-    rowHeight: 120,
+    rowHeight: 200,
     speed: 200 /* ms for transitions */
   }, images);
   if (opt_selectedId) {
@@ -458,6 +461,62 @@ export function updateClearFilters() {
 export function setViewClass(view) {
   const allViews = 'view-grid view-map view-photo';
   $('body').removeClass(allViews).addClass(view);
+}
+
+function pickRandomElement(ary) {
+  return ary[Math.floor(Math.random() * ary.length)];
+}
+
+let idleTimer;
+document.onmousemove = resetIdleTimer;
+document.onmousedown = resetIdleTimer; // touchscreen presses
+document.ontouchstart = resetIdleTimer;
+document.onclick = resetIdleTimer;     // touchpad clicks
+document.onscroll = resetIdleTimer;    // scrolling with arrow keys
+document.onkeypress = resetIdleTimer;
+
+function showRandomPhotoWhenIdle() {
+  // Reset the UI as best we can.
+  const $clearFiltersEl = $('#clear-filters');
+  if ($clearFiltersEl.is(':visible')) {
+    $clearFiltersEl.click();
+  }
+  map.setCenter(INIT_CENTER);
+  map.setZoom(INIT_ZOOM);
+  popup.setMap(null);
+  selectMarker(null);
+
+  // Show a random photo.
+  // Ever photo has a chance, but show the popular ones much more.
+  if (Math.random() > 0.5) {
+    const el = pickRandomElement($('#popular a'));
+    el.click();
+  } else {
+    const latLon = pickRandomElement(Object.keys(lat_lons));
+    loadInfoForLatLon(latLon).then(photoIds => {
+      const id = pickRandomElement(photoIds);
+      displayInfoForLatLon(latLon, function() {}, id);
+    }).fail(err => {
+      console.error(err);
+    });
+  }
+  resetIdleTimer();
+}
+
+function resetIdleTimer() {
+  if (idleTimer) {
+    clearTimeout(idleTimer);
+  }
+
+  // Show a random photo after 5 minutes of inactivity.
+  if (isKiosk) {
+    idleTimer = setTimeout(showRandomPhotoWhenIdle, 5 * 60 * 1000);
+  }
+}
+
+resetIdleTimer();
+if (isKiosk) {
+  console.log('Running OldTO in Kiosk Mode');
 }
 
 $(function() {

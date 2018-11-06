@@ -32,7 +32,7 @@ $(function() {
 
   // Returns URL fragments like '/#g:123'.
   const fragment = function(state) {
-    return '/#' + stateObjectToHash(state);
+    return '/' + location.search + '#' + stateObjectToHash(state);
   };
 
   const title = function(state) {

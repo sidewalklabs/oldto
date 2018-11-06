@@ -19,7 +19,8 @@
     "google": false,
     "FB": false,
     "ZeroClipboard": false,
-    "twttr": false
+    "twttr": false,
+    "isKiosk": false
   },
   "rules": {
     "no-console": 0,

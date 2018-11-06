@@ -35,7 +35,7 @@
     <span class="TitleSubhead2">Mapping historical photos</span>
     <div class="feedback-about">
       <a class="mdl-shadow--4dp" href="/">Photo Map</a>
-      <a class="mdl-shadow--4dp" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
+      <a class="mdl-shadow--4dp hide-for-kiosk" href="mailto:oldto@sidewalktoronto.ca">Feedback</a>
     </div>
   </div>
 
@@ -145,8 +145,7 @@
         It’s also possible that some addresses listed with the historic photographs were simply marked wrong.
       </p>
       <p class="h8">
-        If you see an incorrect address in the collection, please click the "Feedback" link for that image
-        or <a href="mailto:oldto@sidewalktoronto.ca">email us</a>.
+        If you see an incorrect address in the collection, please <a href="mailto:oldto@sidewalktoronto.ca">email us</a>.
       </p>
 
       <div class="h5">What else can this tool do?</div>
@@ -212,6 +211,14 @@
       </p>
     </div>
   </div>
+
+  <script>
+    var isKiosk = (window.location.search.indexOf('kiosk') >= 0);
+    if (isKiosk) {
+      document.body.className += ' kiosk';
+      document.querySelector('.feedback-about a').setAttribute('href', '/?kiosk=1');
+    }
+  </script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -34,6 +34,8 @@ $(() => {
   $('#location-search').on('keypress', function(e) {
     if (e.which !== 13) return;
 
+    document.activeElement.blur();  // hides keyboard for kiosk
+
     const address = $(this).val();
     $.getJSON('https://maps.googleapis.com/maps/api/geocode/json', {
       address,

@@ -682,8 +682,8 @@ $(function() {
     }, photoId);
     $(window).trigger('showGrid', latLonStr);
   };
+  document.addEventListener('touchstart', popupOnClick, true /* capture phase */);
   document.addEventListener('click', popupOnClick, true /* capture phase */);
-  document.addEventListener('touchend', popupOnClick, true /* capture phase */);
 
   $(document).on('click', '.inline-close', () => {
     $('#grid-container').find('.og-close').trigger('click');

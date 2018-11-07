@@ -13,8 +13,6 @@ const LABEL_LAYERS = [
   'bridge_minor'
 ]
 const YEARS = [1947, 1983, 1985, 1987, 1989, 1991, 1992, 2018];
-const SATELLITE_LAYER = 'Satellite';
-let currentLayer = YEARS[0];
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicnZpbGltIiwiYSI6ImNqZ2Nic2R5czNncWwyd241djdwODIyOGgifQ.YwmNuS4UDs0Q27LBHvLg7w';
 
@@ -47,16 +45,23 @@ let marker;
 map.on('load', () => {
   window.map = map;
 
-  // Turn off transitions for now; may want to revisit whether these are helpful.
+  map.setLayoutProperty('Satellite', 'visibility', 'none');
   for (const year of YEARS) {
     map.setPaintProperty('' + year, 'raster-fade-duration', 0);
+    map2.setPaintProperty('' + year, 'raster-fade-duration', 0);
   }
-  showYear(currentLayer, map);
-  showYear(YEARS[YEARS.length - 1], map2);
+
+  showYear('1947', map);
+  showYear('2018', map2);
 });
 
-function cleanupVisibility() {
-  // Hide all layers which aren't the current year.
+function showYear(year, map) {
+  const newLayer = '' + year;
+
+  $('#year').text(year);
+  const currentLayer = newLayer
+  map.setLayoutProperty(currentLayer, 'visibility', 'visible');
+  map.moveLayer(currentLayer, 'landuse_overlay_national_park');  // move to, below labels
   for (const year of YEARS) {
     const layer = '' + year;
     if (layer !== currentLayer) {
@@ -65,78 +70,23 @@ function cleanupVisibility() {
   }
 }
 
-function showYear(year, map) {
-  const newLayer = '' + year;
-  if (newLayer !== currentLayer) {
-    $('#year').text(year);
-    currentLayer = newLayer
-    map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-    map.moveLayer(currentLayer, 'landuse_overlay_national_park');  // move to, below labels
-    // hide the old layer after things have settled to avoid a visual glitch.
-    window.setTimeout(cleanupVisibility, 1000);
-  }
-}
-
-function changeYear(delta) {
-  const index = $('#slider').slider('value');
-  const newIndex = (index + YEARS.length + delta) % YEARS.length;
-  const year = YEARS[newIndex];
-  showYear(year, map);
-  $('#slider').slider('value', newIndex);
-}
-
-$('#slider').slider({
-  min: 0,
-  max: YEARS.length - 1,
-  value: 0,
-  slide: (event, ui) => {
-    const index = ui.value;
-    showYear(YEARS[index], map);
-  }
-});
-
-$('#prev-year').on('click', () => changeYear(-1));
-$('#next-year').on('click', () => changeYear(+1));
-
-let timerId;
-
-$('#pause').on('click', () => {
-  window.clearInterval(timerId);
-  timerId = null;
-  $('#pause').hide();
-  $('#play').show();
-});
-
-$('#play').on('click', () => {
-  changeYear(+1);
-  timerId = window.setInterval(() => {
-    changeYear(+1);
-  }, 2000);
-  $('#play').hide();
-  $('#pause').show();
-});
-
 let labelsVisible = false;
 function setLabelVisibility() {
   const visibility = labelsVisible ? 'visible' : 'none';
   for (const label of LABEL_LAYERS) {
     map.setLayoutProperty(label, 'visibility', visibility);
+    map2.setLayoutProperty(label, 'visibility', visibility);
   }
 }
 
-let satelliteVisible = false;
-function setSatelliteVisibility() {
-  const visibility = satelliteVisible ? 'visible' : 'none';
-  map.setLayoutProperty(SATELLITE_LAYER, 'visibility', visibility);
-}
+$('#year-select').on('change', function() {
+  const year = $(this).val();
+  showYear(year, map);
+});
 
 $('#show-labels').on('change', function() {
   labelsVisible = $(this).is(':checked');
   setLabelVisibility();
-});
-$('#show-satellite').on('change', function() {
-  satelliteVisible = $(this).is(':checked');
-  setSatelliteVisibility();
 });
 
 $('#location-search').on('keypress', function(e) {

@@ -2063,6 +2063,18 @@ make-dir@^1.0.0:
   dependencies:
     pify "^3.0.0"
 
+mapbox-gl-compare@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl-compare/-/mapbox-gl-compare-0.2.0.tgz#8294a8098a21837a7a678db96bff046325b120ab"
+  integrity sha512-SSQQMH5ksyzWoPt2v/ntfVxQrC3Clh8k2o/V8/fjUTeLeC8UzOgwl3FxzNauWkHOWPA/k+Wt5jX816Gqu7Rueg==
+  dependencies:
+    mapbox-gl-sync-move "^0.1.0"
+
+mapbox-gl-sync-move@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl-sync-move/-/mapbox-gl-sync-move-0.1.0.tgz#1057624a0acc823f4919f6152e80291ff89ac35a"
+  integrity sha1-EFdiSgrMgj9JGfYVLoApH/iaw1o=
+
 memory-fs@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.2.0.tgz#f2bb25368bc121e391c2520de92969caee0a0290"

@@ -33,6 +33,6 @@
     "clipboard": "^2.0.0",
     "http-server": "^0.11.1",
     "mapbox-gl-compare": "^0.2.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   }
 }

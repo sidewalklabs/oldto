@@ -1,8 +1,15 @@
 # OldTO
 
-OldTO showcases historic photographs of Toronto by placing them on a map.
-You can read more about the project on its [about page][about] or on the
-[Sidewalk Labs Blog][blog].
+OldTO was a site that showcased historic photographs of Toronto by placing them on a map.
+
+You can read more about it on the [Sidewalk Labs Blog][blog].
+
+Here's a screen recording of what OldTO looked like (YouTube):
+
+[![Screen recording of OldTO](https://img.youtube.com/vi/krW-wl7gACA/0.jpg)][youtube]
+
+While the OldTO is no longer hosted by Sidewalk Labs, the source code is all available in this
+repo and it is possible to run it yourself. The instructions below describe how to do this.
 
 ## How it works
 
@@ -131,3 +138,4 @@ To update the list of street names, run:
 [cached-geocodes]: https://drive.google.com/open?id=1F0J3RHUA1bVRJTJGlRKDuE_IVpb1BwQH
 [about]: https://oldtoronto.sidewalklabs.com/about.html
 [blog]: https://medium.com/sidewalk-talk/explore-toronto-through-historical-photos-one-block-at-a-time-2fbcd38b511a
+[youtube]: https://www.youtube.com/watch?v=krW-wl7gACA

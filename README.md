@@ -23,20 +23,32 @@ which look for addresses and cross-streets. We send these through the
 images. We also incorporate a [set of points of interest](/data/toronto-pois.osm.csv)
 for popular locations like the CN Tower or City Hall.
 
-* Live site: https://oldtoronto.sidewalklabs.com
-
 ## Development setup
 
 Setup dependencies (on a Mac):
 
     brew install coreutils csvkit
 
-OldTO requires Python 3.6. Once you have this set up, you can install the
-Python dependencies (possibly in a virtual environment) via:
+OldTO requires Python 3. Once you have this set up, you can install the
+Python dependencies in a virtual environment via:
 
+    python3 -m venv venv
+    source venv/bin/activate
     pip install -r requirements.txt
 
-## Building the site
+## Running the site
+
+### Server
+
+The data for the OldTO site is served via a Python API server.
+Start by running this:
+
+    source venv/bin/activate
+    oldtoronto/devserver.py data/images.geojson
+
+If you've generated geocodes in a different location, change `data/images.geojson` to that.
+
+### Web application
 
 The OldTO site lives in `oldto-site`. In order to build it, you'll need the
 yarn package manager. Instructions on setting that up at https://yarnpkg.com/.
@@ -54,16 +66,16 @@ spin it up by running it locally using `http-server` (install with
     yarn          # install dependencies
     yarn webpack  # bundle JavaScript and build site
     cd dist
-    http-server --proxy=https://api.sidewalklabs.com -p 8081
+    http-server --proxy=http://localhost:8081
 
-Then visit http://localhost:8081/ to browse the site.
+Then visit http://localhost:8080/ to browse the site.
 
 To iterate on the site, use `yarn watch`:
 
     cd oldto-site
     yarn watch &
     cd dist
-    http-server --proxy=https://api.sidewalklabs.com
+    http-server --proxy=http://localhost:8081
 
 ## Generating new geocodes
 
@@ -81,18 +93,7 @@ Note, to run the makefile on an OSX machine you will probably want to install md
 
     brew update && brew install md5sha1sum
 
-## Serving new geocodes
-
-If you've generated new geocodes, you'll need to run your own API server to serve them.
-You can do this by running:
-
-    oldtoronto/devserver.py data/images.geojson &
-    cd oldto-site/dist
-    http-server --proxy=http://localhost:8081
-
-If you've generated geocodes in a different location, change `data/images.geojson` to that.
-
-#### Analyzing results and changes
+### Analyzing results and changes
 
 Before sending out a PR with geocoding changes, you'll want to run a diff to evaluate the change.
 

@@ -16,6 +16,7 @@ cache
 *.sqlite
 *.ipynb
 .venv
+venv
 
 .vscode
 *.log*

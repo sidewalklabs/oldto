@@ -26,7 +26,7 @@ scipy==1.7.1
 six==1.11.0
 sklearn==0.0
 tqdm==4.19.5
-untangle==1.1.1
+untangle==1.2.1
 urllib3==1.23
 vulture==0.26
 weightreservoir==1.0
